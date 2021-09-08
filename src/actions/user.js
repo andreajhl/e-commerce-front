@@ -2,7 +2,7 @@ export const GET_PROFILE = 'GET_PROFILE';
 export const GET_PROFILES ='GET_PROFILES';
 export const REMOVE_PROFILE = 'REMOVE_PROFILE';
 
-const APP ='https://libreriaecommerce.herokuapp.com/'
+const APP ='https://libreriaecommerce.herokuapp.com'
 
 export function getProfile (id){
   return async function (dispatch){

@@ -1,6 +1,6 @@
 import swal from 'sweetalert';
 
-const APP ='https://libreriaecommerce.herokuapp.com/'
+const APP ='https://libreriaecommerce.herokuapp.com'
 
 export function logaut(){
     swal({
