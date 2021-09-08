@@ -5,7 +5,7 @@ export const CLEAR_CART = 'CLEAR_CART';
 export const CHECKOUT_CART = 'CHECKOUT_CART';
 export const SEE_CART = 'SEE_CART';
 
-const APP = 'https://libreriaecommerce.herokuapp.com/'
+const APP ='https://libreriaecommerce.herokuapp.com/'
 
 export function addCart (id){
     return async function(dispatch) {

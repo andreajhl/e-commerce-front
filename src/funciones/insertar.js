@@ -1,4 +1,4 @@
-const APP = 'https://libreriaecommerce.herokuapp.com/'
+const APP ='https://libreriaecommerce.herokuapp.com/'
 
 export async function insertaReview(review, token) {
 
