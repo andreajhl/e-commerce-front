@@ -1,0 +1,34 @@
+.perfilesAdmin{
+    align-items: center;
+    width: 100%;
+    background-color: #f8f7f7;
+        
+}
+.titulo_Perfiles{
+    color: #413e3e;
+}
+
+.perfiles_admin {
+    width: 40rem;
+    height: 30rem;
+    margin: auto;  
+    overflow-y: scroll;
+}
+.perfiles_foto_nombre {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.foto_perfil_admin {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 3rem;
+}
+.userComplete {
+    margin-left: 1rem;
+    color: #666666;
+    font-weight: bold;
+}
+.userComplete:hover {
+    color: sandybrown;
+}

@@ -1,0 +1,87 @@
+.form_promos_contenedor {
+    background-color: #f8f7f7;
+    height: 34rem;
+    
+}
+.form_promos_titulo {
+    font-size: 2rem;
+    color: #413e3e;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    
+}
+
+.form_promos {
+    width: 50rem;
+    height: 27rem;
+    margin: auto;
+    background-color: #d4cfcf50;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+.form_promos_duracion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+.form_promos_duracion h3 {
+    color: #413e3e;
+    font-weight: bold;
+    padding-top: 1rem;
+    
+}
+.fecha_inicio_promo {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    
+}
+.fecha_inicio_promo p {
+    width: 15rem;
+    text-align: left;
+    color: #413e3e;
+    font-weight: 500;
+    
+}
+.fecha_fin_promo {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.calendario_promo {
+    border: none;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.fecha_fin_promo p {
+    width: 15rem;
+    text-align: left;
+    color: #413e3e;
+    font-weight: 500;
+}
+.reglas_promociones {
+    margin-top: 2rem;
+}
+.reglas_promociones h3 {
+    color: #413e3e;
+    margin-bottom: 1rem;
+}
+.reglas_promociones p {
+    color: #413e3e;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+.tabla_promo {
+    width: 25rem;
+    margin: auto;
+}
+.porcentaje_promo {
+    margin-left: 2rem;
+    color: #413e3e;
+    font-weight: bold;
+}
+.porcentaje_descuento_promo {
+    font-weight: bold;
+}

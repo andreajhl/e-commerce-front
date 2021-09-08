@@ -1,0 +1,74 @@
+.promo_vigente {
+    background-color: #f8f7f7;
+    height: 34rem;
+}
+.promo_vigente_titulo {
+    color: #413e3e;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+.promos_vigentes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.promo_card {
+    border-radius: 10px;
+    width: 30rem;
+    margin: auto;
+    background-color: #d4cfcf50;
+}
+.promo_card_fecha p {
+    color: #413e3e;     
+}
+
+.promo_card_titulo {
+    color: #413e3e;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+.detalles_promo_vigente {
+    margin-top: 1rem;
+}
+.detalles_promo_vigente_titulo {
+    color: #413e3e;  
+    font-weight: bold;  
+    margin-bottom: 1rem; 
+}
+.detalles_promo_vigentes_categorias {
+    margin-bottom: 1rem;
+    color: #413e3e;  
+    font-weight: 500;
+}
+.detalles_promo_genero {
+    margin-bottom: 1rem;
+    color: sandybrown;
+    font-weight: 500;
+}
+.detalles_promo_dias {
+    color: #413e3e;  
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.detalles_promo_dias_nombre {
+    color: seagreen;  
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.detalles_promo_eliminar {
+    margin-bottom: 1rem;
+    background-color: red;
+    color: white;
+    padding: 0.4rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    opacity: 0.6;
+}
+.detalles_promo_eliminar:hover {
+    background-color: red;
+    opacity: 1;
+    cursor: pointer;
+
+}

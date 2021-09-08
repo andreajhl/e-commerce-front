@@ -1,0 +1,78 @@
+.pedidosUser{
+    width: 15rem;
+    height: 28rem;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-color: #d4cfcf50;
+    float: initial;
+    border-style: outset;
+    padding: 1rem;
+}
+
+.linkCompra{
+    text-decoration: none;
+    color: black;
+    color: #413e3e;
+}
+.linkCompra:hover {
+color: rgb(17, 14, 14);
+}
+
+.numCompra{
+    text-decoration: underline;
+    font-style: oblique;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: #413e3e;
+}
+
+.fechaCompra{
+    color: rgb(0, 0, 0);
+    font-size: 3vh;
+}
+
+.stateName{
+    color: cornsilk;
+    font-size: 3vh;
+}
+.orden_nombre {
+   color: seagreen;
+   font-weight: bold; 
+   font-size: 1.2rem;
+   margin-bottom: 0.5rem;
+   
+}
+.fecha_orden {
+  width: 15rem;
+  font-size: 1rem;
+  text-align: left;
+  color: #413e3e;
+}
+.estado_orden {
+    text-align: left;
+   margin-bottom: 1rem;
+   color: #413e3e;
+}
+.prod_orden {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #413e3e;
+    
+}
+.productos_orden {
+    height: 10rem;
+    margin-top: 1rem;
+}
+
+.valor_orden {
+    margin-top: 1rem;
+    color: #413e3e;
+    font-weight: bold;
+    
+}
+.peso_valor_orden {
+    color: sandybrown;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}

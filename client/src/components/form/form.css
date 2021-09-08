@@ -1,0 +1,249 @@
+.contenedor_general_form {
+    background-color: #f8f7f7;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.cuerpo_form {
+    overflow-y: scroll;
+    height: 33rem;
+}
+
+.form{
+    background-color: #f8f7f7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    width: 36rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+}
+
+.inputsFom{
+    border:none;
+    border-radius: 3px;
+    background-color:rgb(233, 233, 233);
+    font-size: 15px;
+    background-color: white;
+    padding: 0.3rem;
+    width: 15rem;
+    padding-left: 0.3rem;
+}
+
+.inputsFom_descripcion {
+
+    border:none;
+    border-radius: 3px;
+    background-color:rgb(233, 233, 233);
+    font-size: 18px;
+    background-color: white;
+    padding: 0.3rem;
+    width: 32.4rem;
+    padding-left: 0.3rem;
+}
+
+.input_imagen_newbook {
+    border-radius: 0px;
+    font-size: 15px;
+    color: rgb(37, 36, 36);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.primer_form{
+    font-size: 20px;
+}
+
+.titulo-form {
+    margin-top: 0.5rem;
+    color: rgba(255, 166, 0, 0.836);
+    font-weight: bold;
+}
+
+.titulo_book_form {
+    margin-top: 1rem;
+    color: rgb(37, 36, 36);
+    margin-left: -12rem;
+    font-weight: 500;
+}
+
+.titulo_book_form_editorial {
+    margin-top: 1rem;
+    color: rgb(37, 36, 36);
+    margin-left: -10.2rem;
+    font-weight: 500;
+}
+
+.titulo_book_form_genero {
+    margin-top: 1rem;
+    color: rgb(37, 36, 36);
+    margin-left: -10.1rem;
+    font-weight: 500;
+}
+
+.titulo_book_form_descripcion {
+    margin-top: 1rem;
+    color: rgb(37, 36, 36);
+    font-weight: 500;
+}
+
+.titulo_book_form_fecha {
+    margin-top: 1rem;
+    color: rgb(37, 36, 36);
+    margin-left: -1.8rem;
+    font-weight: 500;
+}
+
+.titulo_book_form_paginas {
+    margin-top: 1rem;
+    color: rgb(37, 36, 36);
+    margin-left: -2.6rem;
+    font-weight: 500;
+}
+
+.titulo_book_form_idioma {
+    margin-top: 1rem;
+    color: rgb(37, 36, 36);
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+.titulo_book_form_precio {
+    margin-top: 1rem;
+    color: rgb(37, 36, 36);
+    margin-left: -11.3rem;
+    font-weight: 500;
+}
+
+.titulo_book_form_stock {
+    margin-top: 1rem;
+    color: rgb(37, 36, 36);
+    margin-left: -11.7rem;
+    font-weight: 500;
+}
+
+.titulo_idiomas  {
+    color: rgb(37, 36, 36);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.titulo_book_form_imagen {
+    color: rgb(37, 36, 36);
+    font-weight: 500;
+}
+
+.contenedor_form_newbook_left {
+    
+    float: left;
+    padding-left: -5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor_form_newbook_right {
+    float: right;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor_form_newbook_right_genero {
+    float: right;
+    margin-right: 1.0rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor_form_newbook_imagen {
+    justify-content: center;
+    margin-top: 40rem;
+}
+
+.menu_genero {
+    border: none;
+    width: 15.7rem;
+    border-radius: 3px;
+    background-color:rgb(233, 233, 233);
+    font-size: 15px;   
+}
+
+.contenedor_form_newbook_left_idioma {
+
+    margin-top: 0.5rem;
+    display: flex;
+    float: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor_es {
+    margin-right: 3rem;
+    margin-left: 0rem;
+}
+
+.contenedor_in {
+    margin-left: 2rem;
+}
+
+.contenedor_img_newbook{
+    align-items: center;
+}
+
+.contenedor_img_button_confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.img_new_book {
+    width: 15rem;
+    height: 25rem;
+    margin-top: 2rem;
+}
+
+.button_confirm_newbook {
+    margin-top: 2rem;
+    border: none;
+    width: 5rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: sandybrown;
+    color: rgb(37, 36, 36);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.button_confirm_newbook:hover {
+    color: white;
+    cursor: pointer;
+    background-color: orange;
+}
+
+.img_tree_book {
+    width: 40rem;
+    height: 27rem;
+}
+
+.checkbox_idioma {
+    cursor: pointer;
+    position: relative
+}
+
+.button_confirm_newbook_disabled {
+    margin-top: 1.5rem;
+    border: none;
+    width: 5rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: grey;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+
+}

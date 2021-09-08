@@ -1,0 +1,110 @@
+.logModalUser {
+    background-color: #f8f7f7;
+    margin-bottom: 2rem;
+}
+.regisTitulo {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: left;
+    margin-left: 12.5rem;
+    color: #413e3e;
+    
+ }
+
+ .modal_dialog_user{
+    border: 1px solid black;
+    border-radius: 1rem;
+    align-items: center; 
+    margin: auto;
+    width: 70%; 
+    height: 100%;
+    background-color: rgb(233, 233, 233);
+ }
+ 
+ .formLoginUser input {
+    border:none;
+    border-bottom: 0.5px solid rgb(170, 161, 161);
+    outline: none;
+    color: #867f7f;
+    font-weight: 500;
+    background-color: rgb(233, 233, 233);
+    
+ }
+ .regisNombreApellido {
+     display: flex;   
+     margin-top: 2rem;
+ }
+ 
+ .regisLeft {
+   left: 2rem;
+   position:relative;
+   margin-top: 1rem;
+   top: -1rem;
+   margin-bottom: 2rem;
+ }
+ .regisLeft input {
+     width: 25rem;
+     color: #413e3e;
+     font-size: 1rem;
+ }
+
+ .regisLeft h3 {
+     text-align: left;
+     
+ }
+ 
+ .contraseña {
+     display: flex;
+ }
+
+.regisRight {
+    right: -6rem;
+    position:relative;
+    margin-top: 1rem;
+    top: -1rem;
+    margin-bottom: 2rem; 
+}
+.regisRight input {
+    width: 25rem;
+    font-size: 1rem;
+    color: #413e3e;
+}
+.regisRight h3 {
+    text-align: left;    
+}
+
+.terminosCheck {
+    margin-left: 2.5rem;
+    top: -0.2rem;
+    position: relative;
+    height: 2rem;
+}
+.regisCondiciones {
+    text-align: left;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    color: #413e3e;
+}
+.google_btn {
+    margin-bottom: 2rem;
+}
+.regisBtn {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem; 
+    margin-bottom: 2rem;
+    background-color: sandybrown;
+    color: #413e3e;
+    font-weight: bold;
+ }
+ .regisBtn:hover {
+    cursor: pointer;
+    background-color: rgb(255, 168, 6);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 15px sandybrown;
+ }
+ 
