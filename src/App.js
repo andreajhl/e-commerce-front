@@ -1,5 +1,4 @@
-import React,{useEffect} from 'react';
-import { useSelector } from "react-redux";
+import React from 'react';
 import { Route, Switch, Redirect} from "react-router-dom";
 
 import DetailOrden from './components/historyShopping/detailOrden/detailOrden';
@@ -26,15 +25,9 @@ import './App.css';
 
 function App() {
   
-  const state = useSelector(state => state.user.profile)
 
-  var a;
 
-  useEffect(() => {
-
-    a= payloadJWT()
-
-  }, [state])
+  const a= payloadJWT()
 
   return (
     <div className="App">
