@@ -2,7 +2,7 @@ export const GET_ORDENES = 'GET_ORNDES';
 export const ORDEN_DETAIL = 'ORDEN_DETAIL';
 
 
-const APP ='https://libreriaecommerce.herokuapp.com'
+const APP = 'http://localhost:4000'
 
 export function getOrdenes(token){
     return async function(dispatch) {

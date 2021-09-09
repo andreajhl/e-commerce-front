@@ -1,4 +1,4 @@
-const APP ='https://libreriaecommerce.herokuapp.com'
+const APP = 'http://localhost:4000'
 
 export async function deletePerfil (id,token){
     var deletePrfoile= await fetch (`${APP}/auth/delete/${id}`,{
@@ -9,8 +9,8 @@ export async function deletePerfil (id,token){
           'Content-Type': 'application/json',
         }
     });
-  deletePrfoile= await deletePrfoile.json()
-  return deletePrfoile
+    deletePrfoile= await deletePrfoile.json()
+    return deletePrfoile
 };
 
 export async function deleteGenero(genero,token) {

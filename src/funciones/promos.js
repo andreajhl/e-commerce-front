@@ -54,10 +54,10 @@ export function promoDesc(libros, promo) {
 export function promoDescPrecioFinal(cart,promo,precioTotal) { 
     const librosDescuento=promoDesc(cart,promo)
 
-    
-      var precioFinal=0  
+    var precioFinal=0
 
     for (const i in cart) {
+        
         if(librosDescuento.includes(cart[i]._id)){
             promo.forEach(e=>{
                 e.genero.forEach(a=>{
@@ -72,7 +72,6 @@ export function promoDescPrecioFinal(cart,promo,precioTotal) {
         }else{
             precioFinal+=cart[i].precio*cart[i].count
         }
-
        
     }
  return precioTotal- precioFinal !== 0? precioFinal : 0

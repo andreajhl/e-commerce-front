@@ -8,10 +8,10 @@ import RegisterForm from "./components/registerForm/registerForm";
 import PromoVigente from './components/promociones/promoVigentes';
 import EditProduct from './components/editProducto/editProducto';
 import checkCart from './components/cart/checkCart/checkCart';
-import { payloadJWT } from './funciones/localStoreFunction';
 import Sucursales from "./components/sucursales/sucursales";
+import { payloadJWT } from './funciones/localStoreFunction';
 import Profiles from './components/perfiles/perfilesAdmin';
-import CreatePromo from "./components/promociones/promo";
+import CreatePromo from './components/promociones/promo';
 import Whishlist from './components/whishlist/whishlist';
 import Generos from "./components/categorias/generos";
 import Details from "./components/details/details";
@@ -19,29 +19,21 @@ import Perfil from './components/perfiles/perfil';
 import NavBar from "./components/navBar/navBar";
 import Home from "./components/home/home";
 
-
 import './App.css';
-
 
 function App() {
   
+  a= payloadJWT()
 
-
-  const a= payloadJWT()
 
   return (
     <div className="App">
       <NavBar/>
       <Route exact path='/' component={Home}/>
-
       <Route path='/details/:id' component = {Details} />
-
-      <Route path= '/check' component={checkCart} />  
-
+      <Route path= '/check' component={checkCart} />      
       <Route path='/sucursales' component={Sucursales} />
-
       <Route path='/registerUser' component={RegisterForm}/>
-
       <Switch>
          <Route path= '/add' render={()=>{
               return a && a.admin ? <CreateProducto/> : <Redirect to='/'/>
@@ -84,8 +76,8 @@ function App() {
               return a? <Whishlist/> : <Redirect to='/'/>
             }}
           />
+          
       </Switch>
-      
     </div>
   );
 }

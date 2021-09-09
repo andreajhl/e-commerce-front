@@ -1,4 +1,4 @@
-const APP ='https://libreriaecommerce.herokuapp.com'
+const APP = 'http://localhost:4000'
 
 export async function editBook(payload,id,token){
     var book= await fetch(`${APP}/productos/edit/${id}`,{

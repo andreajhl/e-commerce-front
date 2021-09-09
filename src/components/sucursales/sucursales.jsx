@@ -10,6 +10,7 @@ import {seeCart} from '../../actions/cart';
 
 import '../../styles/sucursales/sucursales.scss';
 import {FaMapMarkedAlt} from 'react-icons/fa';
+import undraw3 from "../../img/alfiler.png";
 import 'leaflet/dist/leaflet.css';
 import swal from 'sweetalert';
 

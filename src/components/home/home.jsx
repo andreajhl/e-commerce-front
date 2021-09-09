@@ -42,7 +42,7 @@ export default function Home () {
   const totalPaginas= []
 
   const APP = window.location.href
-
+  console.log(APP)
 
   for (let i = 0; i <Math.ceil(books.length / cards); i++) {
     totalPaginas.push(i)
@@ -60,7 +60,7 @@ export default function Home () {
   }, [books])
 
   var librosPromo =promoDesc(allBooks,promo);
-
+console.log(promo)
   const nextPage = () => {
     const next= currentPag + 1
     const index= next * cards
