@@ -58,7 +58,7 @@ export function promoDescPrecioFinal(cart,promo,precioTotal) {
 
     for (const i in cart) {
        
-        if(librosDescuento.includes(cart[i]._id)){
+        if(librosDescuento && librosDescuento.includes(cart[i]._id)){
             for (let e = 0; e < promo.length; e++) {
                 for (let a = 0; a < promo[e].genero.length; a++) {
                     if(cart[i].generos.includes(a)){
