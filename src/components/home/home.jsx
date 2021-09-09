@@ -43,7 +43,6 @@ export default function Home () {
 
   const APP = window.location.href
 
-
   for (let i = 0; i <Math.ceil(books.length / cards); i++) {
     totalPaginas.push(i)
   }

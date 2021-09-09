@@ -18,7 +18,7 @@ export default function HistoryShopping(){
     const dispatch = useDispatch();
 
     const ordenesDeCompras= useSelector(state => state.ordenes.ordenes);
-
+    
     const [ordenes, setordenes] = useState([])
 
     useEffect(() => {

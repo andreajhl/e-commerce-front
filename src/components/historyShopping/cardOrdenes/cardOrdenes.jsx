@@ -6,7 +6,7 @@ import '../../../styles/ordenes/cardOrdenes.scss';
 export default function CardOrdenes({props}){
 
     const {nombre,apellido,_id,productos,estado,valorTotal,fecha,admin}=props;
-    
+    console.log(estado)
     return (
         
         <div className="pedidosUser">

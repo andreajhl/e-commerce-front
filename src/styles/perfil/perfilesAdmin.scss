@@ -2,6 +2,7 @@
     align-items: center;
     width: 100%;
     background-color: #f8f7f7;
+    height: 100vh;
         
 }
 .titulo_Perfiles{
@@ -10,9 +11,9 @@
 
 .perfiles_admin {
     width: 40rem;
-    height: 30rem;
+    height:70vh;
     margin: auto;  
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .perfiles_foto_nombre {
     display: flex;

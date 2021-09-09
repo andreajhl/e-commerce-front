@@ -1,6 +1,6 @@
 .form_promos_contenedor {
     background-color: #f8f7f7;
-    height: 34rem;
+    height: 100vh;
     
 }
 .form_promos_titulo {
@@ -13,11 +13,11 @@
 
 .form_promos {
     width: 50rem;
-    height: 27rem;
+    height: 70vh;
     margin: auto;
     background-color: #d4cfcf50;
     border-radius: 10px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .form_promos_duracion {
     margin-top: 2rem;

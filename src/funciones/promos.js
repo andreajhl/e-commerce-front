@@ -7,9 +7,10 @@ export function promoDesc(libros, promo) {
     promo.forEach(e=>promosGenero.push(e.genero));
 
     if(promo[0] && promo[0].genero[0] !== 'All'){  
-
+        
         if(libros.length>0 ){
             libros.forEach(element=>{
+                
                 element.generos.forEach(genero=>{
                     if(promosGenero.flat(Infinity).includes(genero)){
                         librosEnPromo.push(element._id)
@@ -58,7 +59,7 @@ export function promoDescPrecioFinal(cart,promo,precioTotal) {
 
     for (const i in cart) {
        
-        if(librosDescuento && librosDescuento.includes(cart[i]._id)){
+        if(librosDescuento.length>0 && librosDescuento.includes(cart[i]._id)){
             for (let e = 0; e < promo.length; e++) {
                 for (let a = 0; a < promo[e].genero.length; a++) {
                     if(cart[i].generos.includes(a)){
