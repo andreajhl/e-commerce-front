@@ -54,20 +54,21 @@ export function promoDesc(libros, promo) {
 export function promoDescPrecioFinal(cart,promo,precioTotal) { 
     const librosDescuento=promoDesc(cart,promo)
 
-    var precioFinal=0
+    var precioFinal=0 
 
     for (const i in cart) {
-        
+       
         if(librosDescuento.includes(cart[i]._id)){
-            promo.forEach(e=>{
-                e.genero.forEach(a=>{
+            for (let e = 0; e < promo.length; e++) {
+                for (let a = 0; a < promo[e].genero.length; a++) {
                     if(cart[i].generos.includes(a)){
                         let porcentaje= e.porcentaje/100
                         precioFinal+=cart[i].precio*cart[i].count - (cart[i].precio*cart[i].count * porcentaje)
                     }
                     
-                })
-            })
+                }
+                
+            }
              
         }else{
             precioFinal+=cart[i].precio*cart[i].count
