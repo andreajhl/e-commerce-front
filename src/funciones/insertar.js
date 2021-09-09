@@ -16,6 +16,7 @@ export async function insertaReview(review, token) {
 };
 
 export async function createPromo (promo,token){
+
     var promoCreate= await fetch (`${APP}/promo`, {
         method: 'post',
         headers:{
@@ -25,14 +26,17 @@ export async function createPromo (promo,token){
         },
         body: JSON.stringify(promo)
     });
+    
     promoCreate= await promoCreate.json()
-
     return promoCreate
 }
 
 export function colorea(e){
-    let { id } = e.target
-    id = Number(id)
+
+    let { id } = e.target;
+
+    id = Number(id);
+    
     for(let i = 1 ; i < 6 ; i++ ) {
         if( i <= id ){
             let star = document.getElementById(i)

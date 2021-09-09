@@ -9,8 +9,8 @@ export async function deletePerfil (id,token){
           'Content-Type': 'application/json',
         }
     });
-    deletePrfoile= await deletePrfoile.json()
-    return deletePrfoile
+  deletePrfoile= await deletePrfoile.json()
+  return deletePrfoile
 };
 
 export async function deleteGenero(genero,token) {
