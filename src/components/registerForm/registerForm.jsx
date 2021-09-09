@@ -75,7 +75,7 @@ export default function RegisterForm(){
 
             };
             let a= await newUser(login);   
-            console.log(a)
+
             if(a.token){
                 window.localStorage.setItem("token", a.token)
                 (swal({
