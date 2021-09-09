@@ -1,4 +1,4 @@
-const APP = 'http://localhost:4000'
+const APP = 'https://libreriaecommerce.herokuapp.com'
 
 export async function deletePerfil (id,token){
     var deletePrfoile= await fetch (`${APP}/auth/delete/${id}`,{

@@ -1,7 +1,7 @@
 export const GET_PROMOS = 'GET_PROMOS';
 export const WHISHLIST = 'WHISHLIST';
 
-const APP = 'http://localhost:4000'
+const APP = 'https://libreriaecommerce.herokuapp.com'
 
 export function getPromos (){
     return async function (dispatch){

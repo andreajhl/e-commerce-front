@@ -9,7 +9,7 @@ export const FILTER_LENGUAGE_BOOK = 'FILTER_LENGUAGE_BOOK';
 export const FILTER_PRECIO_BOOK = 'FILTER_PRECIO_BOOK'
 
 
-const APP = 'http://localhost:4000'
+const APP = 'https://libreriaecommerce.herokuapp.com'
 
 export function getAllBooks(){
     return async function(dispatch){

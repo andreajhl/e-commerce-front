@@ -2,7 +2,7 @@ export const GET_GENDERS = 'GET_GENDERS';
 export const CREATE_GENDER = 'CREATE_GENDER';
 
 
-const APP = 'http://localhost:4000'
+const APP = 'https://libreriaecommerce.herokuapp.com'
 
 export function getGenders(){
     return async function(dispatch) {
