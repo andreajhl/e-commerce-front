@@ -1,0 +1,453 @@
+.nav_principal{
+  padding-top: 1%;
+  background-color: #f8f7f7;
+}
+.mainNavBar{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding-bottom: 2rem;
+    
+  }
+
+#leftNavBar{
+    width: 400px;
+    height: 100vh;
+    background-color: rgb(233, 233, 233);
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    z-index: 8;
+    left: -400px;
+    transition: all 0.5s ease-in-out;
+    
+  }
+
+
+  
+  #rightNavBar{
+    width: 400px;
+    display: flex;
+    height: 100vh;
+    background-color: rgb(233, 233, 233);
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    z-index: 8;
+    right: 1px;
+    top: -140vh;
+    transition: all 0.5s ease-in-out;
+    
+  }
+
+  #loginNavBar{
+    align-items: center;
+    width: 40vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(233, 233, 233);
+    justify-content: center;
+    position: absolute;
+    z-index: 8;
+    right: -20px;
+    top: -140vh;
+    transition: all 0.5s ease-in-out;
+    
+  }
+
+  #buttonsForms{
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .userLoginButton{
+      cursor: pointer;
+      border: none;
+      width: 20vh;
+      padding: 0.7rem;
+      border-radius: 5px;
+      background-color: sandybrown;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      position: static;
+  }
+  .userLoginButton:hover{
+      background-color: orange;
+  }
+
+  .userLoginButtonSesion{
+      cursor: pointer;
+      border: none;
+      width: 20vh;
+      padding: 0.7rem;
+      opacity: 0.7;
+      border-radius: 5px;
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      position: static;
+  }
+  .userLoginButtonSesion:hover{
+      background-color: red;
+      opacity: 1;
+  }
+
+
+  .leftNavBarButton_active{
+    background-color: sandybrown;
+    position: absolute;
+    z-index: 9;
+    top: 8px;
+    left: 15px;
+    margin: auto;
+    border: none;
+    border-radius: 50px;
+    padding: 0.3rem;
+  }
+
+  .leftNavBarButton_inactive{
+  
+    position: absolute;
+    z-index: 9;
+    top: 8px;
+    left: 15px;
+    margin: auto;
+    border: none;
+    border-radius: 50px;
+    padding: 0.3rem;
+  }
+  
+
+  #loginNavBarbutton_active{
+    margin-top: 0.3rem;
+    background-color: rgba(145, 175, 214, 0.438);
+    position: absolute;
+    z-index: 9;
+    top: 0vh;
+    right: 0rem;
+    
+  }
+
+  #loginNavBarbutton_inactive{
+    margin-top: 0.3rem;
+    position: absolute;
+    z-index: 9;
+    top: 0vh;
+    right: 0rem;
+
+  }
+  
+  .loginNavBarbutton{
+      display: flex;
+      align-items: center;
+      background-color: rgb(233, 233, 233);
+      padding: 0.1rem;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+  
+#rightNavBarButton_active {
+    margin-top: 0.2rem;
+    background-color: rgba(145, 175, 214, 0.438);
+    position: absolute;
+    z-index: 9;
+    top: 2vh;
+    right: 10rem;
+    
+    color: rgb(44, 41, 41);
+}
+  
+#rightNavBarButton_inactive {
+  margin-top: 0.2rem;
+  position: absolute;
+  z-index: 9;
+  top: 2vh;
+  right: 10rem;
+  color: rgb(44, 41, 41);
+}
+#rightNavBarButton_inactive:hover {
+  background-color: rgba(145, 175, 214, 0.438);
+}
+
+
+  .rightNavBarButton {
+      display: flex;
+      align-items: center;
+      background-color: rgb(233, 233, 233);
+      padding: 0.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+
+.icono_nav {
+    font-size: 2rem;
+    color: rgb(68, 63, 63);
+    cursor: pointer;
+}
+
+
+.titulo_principal {
+    margin-left: 5rem;  
+    
+}
+
+.titulo_b {
+  text-decoration: none;
+  color: black;
+  
+}
+
+.titulo_b:hover {
+  color: sandybrown;
+}
+
+.icono_nav_der {
+    font-size: 2rem;
+    padding: 0.2rem;
+}
+
+.numero_icono {
+    font-size: 1.5rem;
+    margin-left: 15px;
+    margin-right: 5px;
+    font-weight: bold;
+    color: sandybrown;;
+}
+
+.login-btn{
+  position: absolute;
+    right: 2rem;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+}
+
+.icono_Usuario {
+    position: absolute;
+    right: 2rem;
+    font-size: 3rem;
+    
+}
+
+.searchBar {
+width: 30rem;
+background-color: rgb(233, 233, 233);
+padding: 0.5rem;
+margin-top: 0.5rem;
+height: 1.5rem;
+margin-left: 5rem;
+border-radius: 1rem;
+display: flex;
+}
+
+.search-input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  color: rgb(37, 36, 36);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.search-btn {
+  align-self: center;
+  color: rgb(56, 55, 55);
+  font-size: 1.2rem;
+}
+
+.search-input::placeholder{
+  color: rgb(105, 104, 104);
+}
+
+.search {
+
+  color: black;
+}
+
+.agregar_libro {
+  
+  margin-top: 1rem;
+  color: black;
+  margin-left: -3rem;
+}
+
+.agregar_libro:hover {
+  color: rgba(0, 128, 0, 0.774);
+}
+
+.titulo_leftNavBar {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: #181717;
+}
+
+.contenedor_ordenado {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.titulo_ordenado {
+  margin-left: 2rem;
+  margin-right: 1rem;
+  color: #181717;
+}
+
+#select {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.filtrado_leftNavBar {
+  display: flex;
+}
+
+.filtrado_icon {
+  margin-top: 0.3rem;
+  margin-left: 2rem;
+  font-size: 2rem;
+  color: #181717;
+}
+
+.titulo_filtrado {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  color: #181717;
+}
+
+.menu_filtrado_precio {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.titulo_filtrado_precio {
+  margin-left: -17rem;
+  margin-top: 1rem;
+  color: #181717;
+  margin-bottom: 1rem;
+}
+
+.precio_min_input {
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem;
+  font-size: 15px;
+  width: 8.5rem;
+  margin-right: 1rem;
+  padding-left: 0.3rem;
+  color: #181717;
+}
+
+.precio_max_input {
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem;
+  font-size: 15px;
+  width: 8.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 0.3rem;
+  color: #181717;
+}
+
+.precio_icon {
+  font-size: 20px;
+  color: #181717;
+  margin-top: 0.3rem;
+}
+
+.button_filtrar_precio_activo {
+  border: none;
+  float: right;
+  margin-right: 1.7rem;
+  border-radius: 5px;
+  background-color: sandybrown;
+  color: rgb(37, 36, 36);
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 15px;
+}
+
+.button_filtrar_precio_activo:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.button_filtrar_precio_inactivo {
+  background-color: rgb(37, 36, 36);
+  border: none;
+  float: right;
+  margin-right: 1.7rem;
+  border-radius: 5px;
+  color: white;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 15px;
+  display: none;
+}
+
+.titulo_filtrado_idioma {
+  margin-top: 6rem;
+  color: #181717;
+  margin-bottom: 1rem;
+}
+
+.menu_filtrado_idioma {
+  display: flex;
+}
+
+.checkbox_filtro_idioma_es {
+  margin-left: 6rem;
+  margin-right: 5rem;
+  color: #181717;
+  cursor: pointer;
+}
+
+.checkbox_filtro_idioma_en {
+  color: #181717;
+  cursor: pointer;
+}
+.profileImg{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.sucursales_button_home{
+  border: none;
+  width: 5rem;
+  height: 2rem;
+  padding: 0.3rem;
+  margin-top: 0.4rem;
+  margin-left: 9rem;
+  border-radius: 5px;
+  background-color: sandybrown;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none !important;
+}
+
+.sucursales_button_home:hover {
+  background-color: rgb(255, 168, 6);
+  cursor: pointer;
+}
+.img_logo_nav {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 2rem;
+ margin-top: 0.3rem;
+}

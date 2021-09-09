@@ -1,0 +1,39 @@
+.opcionesUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.perfilGo{
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 15px;
+    background-color: sandybrown;
+    margin-bottom: 5px;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+.perfilGo:hover{
+    background-color: orange;
+}
+
+.historialGo:hover {
+    background-color: orange;
+}
+
+.perfilGo:active{
+opacity:1;
+}
+
+.profilePhoto{
+    height: 170px;
+    width: 185px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.welcome{
+    color:black;
+    font-size: 24px;
+}
+

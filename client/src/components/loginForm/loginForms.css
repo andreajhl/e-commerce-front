@@ -1,0 +1,125 @@
+
+.title{
+    margin-top: 1rem;
+    font-size: 4vh;
+    color: #413e3e;
+    margin-bottom: 4vh;
+}
+
+.logModal{
+
+    display: block;
+    flex-direction: column;
+    align-items: center; 
+    width: 28vh;  
+    max-width: 28vh;
+    height: 80vh;
+    margin: 0;
+    transition:  all 0.5s ease-in-out; 
+    z-index: 1;
+    position: inherit;
+    justify-content: space-evenly;  
+    opacity: 0;
+}
+
+.modal_dialog{
+    max-width: 100%;
+    align-items:center ;
+    height: 80vh;
+    width: 30vh;
+    max-width: 28vh;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.loginUser{
+    color: rgb(0, 0, 0);
+    font-size: 2.4vh;
+    margin-bottom: -2.8vh;
+}
+
+.loginPass{
+    color: rgb(0, 0, 0);
+    font-size: 2.4vh;
+    margin-bottom: -2.8vh;
+}
+
+.close {
+    border: none;
+    width: 5rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: rgb(244, 164, 96, 0.5);
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    }
+    
+.close:hover{
+background-color: rgb(244, 164, 96, 1); 
+color: white;
+cursor: pointer;
+}
+
+.logginBtn{
+    border: none;
+    width: 5rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: rgb(244, 164, 96,0.5);
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.logginBtn:hover{
+    background-color: rgb(244, 164, 96,1);
+    cursor: pointer;
+    color:white;
+}
+
+.olvidaste{
+    color: grey;
+    font-size: 12px;
+    margin-bottom: -1vh;
+    margin-top: 5vh;
+
+}
+
+.inputMail1{
+    padding: 1.5vh;
+    width: 23vh;
+    border-style: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color:rgba(255, 255, 255, 0.2) ;
+    margin-bottom: 5vh;
+}
+
+.inputPass{
+    padding: 1.5vh;
+    width: 23vh;
+    border-style: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color:rgba(255, 255, 255, 0.2);
+}
+
+.modal{
+    background-color: rgb(250, 220, 164);
+    display: grid;
+    opacity: 0; 
+    width: 5em; 
+    height: auto;
+    margin: 0;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s ;
+    line-height: 0.5em;
+    z-index: 1;
+    position: absolute;
+}
+
+.modal-open{
+    display:grid;
+    
+}
+.modal_dialog{
+    align-items:center ;
+}

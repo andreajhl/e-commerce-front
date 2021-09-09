@@ -1,0 +1,52 @@
+.map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    width: 60%;
+    background-color: rgb(128, 128, 128, 0.5);
+}
+
+.container_sucursales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f8f7f7;
+}
+.puntero{
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+.puntero:hover{
+    color: white;
+}
+.leaflet-container{
+    width: 80%;
+    height: 60vh;
+}
+.text_sucursales{
+    width: 100%;
+}
+.sucTitle{
+    background-color: sandybrown;
+    color: snow;
+    width: 100%;
+}
+.info{  
+    display: block;
+    background-color: sandybrown;
+    font-size: larger;
+}
+
+.imageGPS{
+    background-color:white ;
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    margin-left: 25px;
+    width: 40px; height: 40px;
+}

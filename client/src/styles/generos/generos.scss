@@ -1,0 +1,106 @@
+.categorias_menu_admin {
+    background-color: #f8f7f7;
+    height: 100%;
+}
+.categorias_crear_map {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+.genero_map {
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    height: 8rem;
+    margin: 0.6rem;
+    overflow: hidden;
+    background-color: rgb(233, 233, 233);
+}
+.botones_categoria {
+    margin-left: 7rem;
+}
+.eliminar_categoria {
+    width: 9rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-top: 0.4rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(51, 40, 30);
+    color: white;
+}
+.eliminar_categoria:hover {
+    cursor: pointer;
+    background-color: rgb(199, 7, 7);
+}
+.botones_categoria input {
+    width: 9rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.6rem;
+    border-radius: 5px;
+}
+.guardar_categoria {
+    width: 9rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-top: 0.4rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(51, 40, 30);
+    color: white;
+}
+.guardar_categoria:hover {
+    cursor: pointer;
+    background-color: sandybrown;
+}
+
+.genero_categoria {
+    width: 8rem;
+    font-size: 1.5rem;
+    padding: 1%;  
+    font-weight: bold;
+    color:black;
+    border-right:1px solid black;
+    border-top:none;
+    border-bottom: none;
+    border-left: none;
+    text-align: center;
+}
+.administrar_categorias {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #413e3e;
+}
+.categorias_crear {
+    display: flex;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+}
+.categorias_crear button{
+    font-size: 1rem;
+    padding: 0.7rem;
+    margin-right: 1rem;
+    background-color: seagreen;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.categorias_crear button:hover{
+   cursor: pointer;
+   background-color: green;
+}
+.categorias_crear input {
+    width: 15rem;
+    border: none;
+    border-bottom: 1px solid rgb(145, 139, 139);
+    font-size: 1.5rem;
+    color: #413e3e;
+    padding-left: 0.3rem;
+    outline: none;
+}

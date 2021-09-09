@@ -1,0 +1,31 @@
+.historyShop{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    position: relative;
+    width: auto;
+    padding-top: 5rem;
+    background-color: #f8f7f7;
+}
+
+.historialCompra{
+    background-color: #f8f7f7;
+    width: 100%;
+    height: 10vh;
+}
+.historial_titulo {
+    font-size: 2rem;
+    color: #413e3e;
+}
+.filtro{
+    padding-top: 3rem;
+}
+
+.select{
+    width: 20rem;
+    margin: auto;
+    margin-top: 1rem;
+}
+.select_opciones {
+    background-color: #f8f7f7;
+}
+

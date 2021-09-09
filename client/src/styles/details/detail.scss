@@ -1,0 +1,214 @@
+
+.details {
+    display: flex;
+    background-color: #f8f7f7;
+    height: 100%;
+    width: 100%;
+}
+.detalles_izq {
+    border-radius: 10px;
+    height: 28rem;
+    margin-left: 2rem;
+    background-color: white;
+  
+   
+}
+.imagen_detail {
+    width: 13rem;
+    height: 18rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+}
+.titulo_detail {
+    font-size: 2rem;
+    text-align: left;
+    color: #413e3e;
+}
+.autor_detail{
+    font-size: 1.5rem;  
+}
+
+.contenido_details {
+    
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.descripcion_titulo {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: sandybrown;
+    margin-top: 2rem;
+}
+
+.descripcion_contenido {
+ text-align: justify;
+ overflow-y: scroll; 
+ height: 12.5rem;
+ margin-bottom: 2rem;
+ font-weight: 500;
+ padding-right: 1rem;
+ margin-top: 1rem;
+ width: 60rem;
+}
+.autor_detail_der {
+ text-align: left;
+ font-size: 1.7rem;
+ color: #666666;
+}
+
+.autor_editorial {
+    display: flex;
+    align-items: center;
+}
+.editorial_der {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: sandybrown;
+}
+.guion_der {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.precio_detalle {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.precio_peso {
+    color: sandybrown;
+    font-size: 1.3rem; 
+    font-weight: bold;
+}
+.precio_numero {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #413e3e;
+    margin-left: 0.5rem;
+}
+.stock {
+    display: flex;
+    margin-top: 1rem;
+}
+.stock_unidad {
+    color: rgb(10, 165, 10);
+    font-weight: bold;
+}
+.stock_vacio {
+    font-weight: bold;
+    color: red;
+}
+.detail_info {
+ margin-left: 1rem;
+ margin-top: 1rem;
+
+}
+.detail_info div {
+    display: flex;
+    color: #666666; 
+    font-weight: 500;  
+}
+
+.detail_texto {
+  
+   color: sandybrown;
+   font-weight: bold;
+   position: absolute;
+   margin-left: 7rem;
+    
+}
+.comprar_detail {
+    border: none;
+    width: 5rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: sandybrown;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+.comprar {
+    display: block;
+    float: right;
+    margin-right: 5rem;
+    margin-top: 3rem;
+}
+.comprar_detail:hover {
+    background-color: rgb(255, 168, 6);
+    cursor: pointer;
+}
+.comprar_carrito {
+   margin-top: 2rem;
+   color: #413e3e;
+   font-weight: bold;
+}
+
+.vacio_detail {
+    display: none;
+    
+}
+.boton_editar {
+    margin-top: 2rem;
+    border: none;
+    width: 5rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: rgb(51, 40, 30);
+    
+    font-size: 15px;
+    
+}
+.boton_editar:hover {
+cursor: pointer;
+background-color: #666666;
+}
+.btn_editar {
+    color: white;
+    font-weight: bold;
+
+}
+.estrellas {
+    display: inline;
+    color: rgb(255, 168, 6);
+}
+
+.opiniones {
+    text-align: left;
+}
+.titulo_valoracion {
+    color: #413e3e;
+    margin-bottom: 2rem;
+}
+.valoraciones h4 {
+    color: #413e3e;
+    margin-bottom: 0.5rem;
+}
+.estrellas {
+    font-size: 1.5rem;
+}
+.comentario_usuario {
+    margin-bottom: 2rem;
+}
+
+.btn_Eliminar {
+    margin-top: 2rem;
+    border: none;
+    width: 5rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: rgb(51, 40, 30);
+    font-size: 15px;  
+    color: white;
+    font-weight: bold;
+    right: -25rem;
+    position: relative;
+}
+.btn_Eliminar:hover {
+cursor: pointer;
+background-color: rgb(199, 7, 7);
+}
