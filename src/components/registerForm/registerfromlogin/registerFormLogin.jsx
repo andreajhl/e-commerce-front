@@ -46,7 +46,7 @@ export default function RegisterFormLogin ({handleSubmit, handleInputChange, inp
                 </div>
                 <div className="regisLeft"> 
                     <h3 className="regisDireccion">Dirección</h3>
-                    <input className="contraseña" placeholder="Pais / Cuidad, Calle, CP" name="direccion" type="direccion" autoComplete='off' required value={inputs.direccion} onChange={handleInputChange} className='formLoginUser_input'/>
+                    <input  placeholder="Pais / Cuidad, Calle, CP" name="direccion" type="direccion" autoComplete='off' required value={inputs.direccion} onChange={handleInputChange} className='formLoginUser_input'/>
                 </div>
             </div>
             <div>

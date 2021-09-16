@@ -108,7 +108,7 @@ export default function RegisterForm(){
             <h1 className="regisTitulo">Completa tus Datos</h1>
             <div className="modal_dialog_user">
                 <RegisterFormLogin handleInputChange={handleInputChange} inputs={inputs} handleSubmit={handleSubmit} />
-                {inputs.nombre.length<1|| inputs.apellido.length<1 || !inputs.documento || inputs.password.length<6 || !inputs.telefono || !inputs.email || !inputs.direccion && <div>
+                {(inputs.nombre.length<1|| inputs.apellido.length<1 || !inputs.documento || inputs.password.length<6 || !inputs.telefono || !inputs.email || !inputs.direccion) && <div>
                     <GoogleLogin
                         clientId="1306055516-vqakgi1c0sql95der98ul0vpsufbppd9.apps.googleusercontent.com"
                         buttonText="Registrate con google"
