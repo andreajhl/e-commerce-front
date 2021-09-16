@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 
-import {getOrdenesUser, getOrdenes} from '../../actions/ordenes'
+import {getOrdenesUser, getOrdenesAdmin} from '../../actions/ordenes'
 import { payloadJWT } from '../../funciones/localStoreFunction';
 import CardOrdenes from './cardOrdenes/cardOrdenes';
 import {seeCart} from '../../actions/cart';
@@ -22,7 +22,7 @@ export default function HistoryShopping(){
     const [ordenes, setordenes] = useState([])
 
     useEffect(() => {
-        admin.admin ? dispatch(getOrdenes(token)) : dispatch(getOrdenesUser(token))
+        admin.admin ? dispatch(getOrdenesAdmin(token)) : dispatch(getOrdenesUser(token))
         dispatch(seeCart())
     }, [token,admin.admin,dispatch]);
 
@@ -33,39 +33,26 @@ export default function HistoryShopping(){
     function filtrarOrdenes(estado){
         setordenes([...ordenesDeCompras].filter(e=>e.estado===estado))
     };
-
  const opcion=[{ value:'creada',label:'Creada'},{ value:'Cancelada',label:'cancelada'},{ value:'procesando',label:'Procesando'},{ value:'completada',label:'Completada'}]
 
     return (
-        <div >
-            {admin.admin ?(
+        <div className='historial_compras_div' >
             <div className='historialCompra'>
-                <h2 className="historial_titulo">Historial de Pedidos</h2>
-                <div className="select_opciones">
+                <div className="historial_titulo">
+                    <h2 className="historial_titulo_i">Historial de Compras</h2>
+                </div>
+                <div className="select">
                     <p className='filtro'>Filtrar las compras por estado:</p>
-                    <Select className='select'
+                    <Select 
+                        className='select_opciones'
                         options={opcion}
                         onChange={(e)=>filtrarOrdenes(e.value)}
                      />
                 </div>
                 <div className="historyShop">
-                {ordenes.length>0? ordenes.map(e=> <CardOrdenes props={{...e,admin:true}} key={e._id}/>) : <p>Aun no hay compras realizadas</p>} 
+                { ordenes && ordenes.length>=1? ordenes.map((e,i)=> <CardOrdenes props={{...e,admin:admin.admin?true:false}} key={i}/>) : <p>Aun no hay compras realizadas</p>} 
                 </div>
-            </div>):
-            ( <div className='historialCompra'>
-                <h2 className="historial_titulo">Historial de Compras</h2>
-                <div className="select_opciones">
-                <p className='filtro'>Filtrar las compras por estado:</p>
-                <Select className='select'
-                        options={opcion}
-                        onChange={(e)=>filtrarOrdenes(e.value)}
-                    />
-                </div>
-                <div  className="historyShop">
-                {ordenes.length>0? ordenes.map(e=> <CardOrdenes props={{...e,admin:false}} key={e._id}/>):<p>Aun no hay compras realizadas</p>} 
-                </div>
-            </div>)
-            }
+            </div>
         </div>
     )
 }

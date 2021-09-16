@@ -1,143 +1,351 @@
+
+@import '../global.scss';
+
 .pasarela {
     background-color: #f8f7f7;
     padding-bottom: 1%;
-    display: flex;
-    flex-direction: column;
-    align-items:initial;
-    justify-content:initial;
+    @include caja-flex(flex,column,space-evenly,center,nowrap);
     height: 100vh;
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 100%;
+    @media #{$smarmini}{
+      @include caja-flex(flex,column,center,center,nowrap);
+      width: 90%;
+      padding-left: 5%;
+      padding-right: 5%;
+   }
+   @media #{$smarphone}{
+      @include caja-flex(flex,column,initial,center,nowrap);
+      width: 90%;
+      padding-left: 5%;
+      padding-right: 5%;
+   }
+   @media #{$tablet}{
+      @include caja-flex(flex,column,initial,center,nowrap);
+      width: 90%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
  }
 
  .pasarela_div{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 50% 50%;
     margin-top: 2%;
+    width:  90%;
+    height: 90%;
+    @media #{$smarmini}{
+      @include caja-flex(flex,column,center,center,nowrap);
+      width: 100%;
+      height: 90%;
+   }
+   @media #{$smarphone}{
+      @include caja-flex(flex,column,center,center,nowrap);
+      width: 100%;
+      height: 90%;
+   }
+   @media #{$tablet}{
+      @include caja-flex(flex,column,center,center,nowrap);
+      width: 100%;
+      height: 90%;
+    }
  }
  
  .contenedor_pasarela {
-    width: 40rem;
+    width: 100%;
     height: 70vh;
-    margin: auto;
-    overflow-y: scroll;
     background-color: #d4cfcf50;
     border-radius: 10px;
+    @include caja-flex(flex,column,initial,center,nowrap);
+    @media #{$smarmini}{
+      width: 100%;
+      height: 50%;
+      padding-top: 3%;
+      border-radius: 0px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+   }
+   @media #{$smarphone}{
+      @include caja-flex(flex,column,center,center,nowrap);
+      width: 100%;
+      height: 50%;
+      padding-top: 3%;
+      border-radius: 0px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+   }
+   @media #{$tablet}{
+      @include caja-flex(flex,column,center,center,nowrap);
+      width: 100%;
+      height: 50%;
+      padding-top: 3%;
+      border-radius: 0px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
     
  }
  .titulo_principal_pasarela {
- margin-bottom: 1rem;
- padding-top: 0.5rem;
- color: #413e3e;
- }
+    height: 10%;
+    width: 100%;
+
+   &_i{
+      color: #413e3e;
+      font-size: 4vh;
+      @media #{$smarmini}{
+        font-size: 1.5ex;
+      }
+      @media #{$smarphone}{
+         font-size: 1.8ex;
+      }
+      @media #{$tablet}{
+         font-size: 2.3ex;
+       }
+   }
+   @media #{$smarmini}{
+      @include caja-flex(flex,column,center,center,nowrap);
+      width: 100%;
+      height: 10%;
+   }
+   @media #{$smarphone}{
+      @include caja-flex(flex,column,center,center,nowrap);
+      width: 100%;
+      height: 8%;
+   }
+   @media #{$tablet}{
+      @include caja-flex(flex,column,center,center,nowrap);
+      width: 100%;
+      height: 5%;
+    }
+   
+}
  .pasarela_card {
-    text-align: left;
-   justify-content: center;
-    margin-bottom: 4rem;
- 
+    margin-top: 5%;
+   height: 65%;
+   overflow-y: auto;
+
  }
  .pasarela_cdtm {
-    display:flex;
-    margin-top: 2rem;
-    margin-left: 5rem;
-    
+   @include caja-flex(flex,row,space-evenly,center,nowrap);
+    margin-top: 5%;
+     margin-bottom: 5%;
+    margin-left: 5%;
+    height: auto;
+    width: 90%;
+    border-radius: 15px;
+    background-color: #fcf5f5;
+   @media #{$smarmini}{
+       border-radius: 8px;
+   }
+   @media #{$smarphone}{
+     border-radius: 10px;
+   }
+   @media #{$tablet}{
+      border-radius: 15px;
+    }
+ }
+ .imagen_pasarela{
+   @include caja-flex(flex,column,center,center,nowrap);
+   width: 40%;
+   height:auto;
+   padding-top: 3%;
+   padding-bottom: 3%;
+   &_i{
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      @media #{$smarmini}{
+         border-radius: 8px;
+     }
+     @media #{$smarphone}{
+       border-radius: 10px;
+     }
+     @media #{$tablet}{
+        border-radius: 15px;
+      }
+   }
  }
  .pasarela_info {
-    margin-left: 3rem;
+    margin-left: 3%;
+    width: 45%;
+    height: 100%;
+    @include caja-flex(flex,column,initial,center,nowrap);
+    @media #{$smarmini}{
+      margin-left: 0%;
+  }
+  @media #{$smarphone}{
+      margin-left: 0%;
+   }
+   @media #{$tablet}{
+      margin-left: 0%;
+    }
  }
  .titulo_pasarela {
     color: #413e3e;
     font-weight: bold;
+    font-size: 2.5vh;
+    @media #{$smarmini}{
+      font-size: 1.6ex;
+   }
+   @media #{$smarphone}{
+     font-size: 1.8ex;
+   }   
+   @media #{$tablet}{
+      font-size: 2.4ex;
+    }
  }
  .autor_pasarela {
     color: #666666;
     font-weight: 500;
+    font-size: 2.3vh;
+    @media #{$smarmini}{
+      font-size: 1.4ex;
+   }
+   @media #{$smarphone}{
+      font-size: 1.6ex;
+    }
+    @media #{$tablet}{
+     font-size: 2.2ex;
+    }
  }
  .editorial_pasarela {
     color: sandybrown;
     font-weight: 500;
+    font-size: 2.3vh;
+    @media #{$smarmini}{
+      font-size: 1.3ex;
+   }
+   @media #{$smarphone}{
+      font-size: 1.5ex;
+    }
+    @media #{$tablet}{
+      font-size: 2ex;
+    }
  }
  .unidades_pasarela {
     color: black;
+    font-size: 2.3vh;
     font-weight: 500;
+    @media #{$smarmini}{
+      font-size: 1.3ex;
+   }
+   @media #{$smarphone}{
+      font-size: 1.5ex;
+    }
+    @media #{$tablet}{
+      font-size: 1.8ex;
+    }
  }
  .peso_pasarela {
     color: sandybrown;
     font-weight: 500;
+    font-size: 2.3vh;
+    @media #{$smarmini}{
+      font-size: 1.8ex;
+   }
+   @media #{$smarphone}{
+      font-size: 2ex;
+    }
+    @media #{$tablet}{
+      font-size: 1.8ex;
+    }
  }
  .precio_pasarela {
     color: #666666;
     font-weight: bold;
+    font-size: 2.3vh;
+    @media #{$smarmini}{
+      font-size: 1.3ex;
+   }
+   @media #{$smarphone}{
+      font-size: 1.6ex;
+    }
+    @media #{$tablet}{
+      font-size: 1.8ex;
+    }
  }
  .datos_pasarela {
     text-align: left;
-    margin-left: 5rem;
-    margin-bottom: 2rem;
+    margin-left:5%;
+    padding-top: 2%;
     font-weight: 600;
+    height: 35%;
+    width: 90%;
+    @media #{$smarmini}{
+      margin-left:5%;
+      padding-top: 2%;
+   }
+   @media #{$smarphone}{
+      margin-left:5%;
+      padding-top: 2%;
+   }
+   @media #{$tablet}{
+      margin-left:5%;
+      padding-top: 2%;
+    }
  }
- .datos_pasarela span {
-   float: right;
-   margin-right: 2rem;
-   font-weight: 700;
-   
+ .neto_pasarela{
+    font-size: 2.5vh;
+    width: auto;
+   @media #{$smarmini}{
+      font-size: 1.2ex;
+   }
+   @media #{$smarphone}{
+      font-size: 1.4ex;
+   }
+   @media #{$tablet}{
+      font-size: 1.6ex;
+    }
  }
+
  .subtotal_pasarela {
-   font-size: 1rem;
    color: #666666;
  }
  .subtotal_pasarela_descuento {
     color: seagreen;
  }
  .total_pasarela {
-    margin-top: 1rem;
-    font-size: 1.3rem;
-    
+    font-size: 2.6vh;
+    @media #{$smarmini}{
+       font-size: 1.2ex;
+   }
+   @media #{$smarphone}{
+      font-size: 1.4ex;
+   }
+   @media #{$tablet}{
+      font-size: 1.6ex;
+   }
  }
  .total_numero_pasarela {
     color: sandybrown;
-    
- }
- .tarjeta_pasarela {
-   
-    width: 40rem;
-    height: 5rem;
-    margin: auto;
-    margin-top: 2rem;
-    
- }
- .tarjeta {
-   border: 1px solid rgb(46, 41, 37);
-   border-radius: 5px;
-   width: 60%;
-   margin-left: 9rem;
-   margin-bottom: 2rem;
-   padding: 0.5rem;
- }
- .btn_pasarela_compra {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-     border: none;
-     border-radius: 5px;
-     padding: 0.7rem; 
-     margin-bottom: 2rem;
-     background-color: sandybrown;
-     color: white;
- }
- .btn_pasarela_compra:hover {
-    cursor: pointer;
-    background-color: rgb(255, 168, 6);
-    color: #413e3e;
-    font-weight: bold;
+
  }
  
  .contenedor_facturacion {
     background-color: rgba(145, 175, 214, 0.438);
     border-radius: 10px;
-    width: 40rem;
-    margin: auto;
-    padding: 0.2rem 0;
+    width: 100%;
     height: 70vh;
-    
+    padding: 0.2rem;
+    @media #{$smarmini}{
+      padding: 0px;
+      border-radius: 0px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+   }
+   @media #{$smarphone}{
+
+      padding: 0px;
+      border-radius: 0px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+   }
+   @media #{$tablet}{
+
+      padding: 0px;
+      border-radius: 0px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
  }
  .facturacion_pasarela {
  font-size: 1.5rem;
@@ -151,41 +359,165 @@
     font-weight: 600;
     color: #666666;
     margin-bottom: 1rem;
+    margin-top: 1rem;
+    @media #{$smarmini}{
+      margin-bottom: 0%;
+      margin-top: 5%;
+      font-size: 1.4ex;
+   }
+   @media #{$smarphone}{
+      margin-bottom: 0%;
+      margin-top: 5%;
+      font-size: 1.7ex;
+   }
+   @media #{$tablet}{
+      margin-bottom: 0%;
+      margin-top: 3%;
+      font-size: 2ex;
+    }
  }
  .datos_personales_pasarela {
- display: flex;
- flex-direction: column;
- margin-bottom: 2rem;
- align-items: center;
+    @include caja-flex(flex,column,space-evenly,center,nowrap);
+   width: 90%;
+   height: 50%;
+
  }
  
- .datos_personales_pasarela div {
-    display: flex;
-    margin-top: 1rem;
-    
+ .datos_personales_pasarela_div{
+    display: grid;
+    margin-left: 10%;
+    grid-template-columns: 20% 70%;
+    @media #{$smarmini}{
+      width: 100%;
+      height: 10%;
+   }
+   @media #{$smarphone}{
+      width: 100%;
+      height: 10%;
+   }
+   @media #{$tablet}{
+      width: 100%;
+      height: 10%;
+    }
  }
- .datos_personales_pasarela label {
-    width: 10rem;
-   text-align: right;
-   margin-right: 2rem;
+ .datos_personales_pasarela_l{
+    width: 100%;
    color: rgb(37, 36, 36);
    font-weight: 600;
+   font-size: 2.3vh;
+   text-align: left;
+
+   @media #{$smarmini}{
+      text-align:center;
+      font-size: 1.2ex;
+   }
+   @media #{$smarphone}{
+      text-align:center;
+      margin-right: 0px;
+      font-size: 1.5ex;
+   }
+   @media #{$tablet}{
+      text-align:center;
+      margin-right: 0px;
+      font-size: 1.8ex;
+    }
  }
  .datos_personales_pasarela input{
     width: 15rem;
     border:none;
-     border-radius: 3px;
-     background-color:rgb(233, 233, 233);
-     font-size: 15px;
-     background-color: white;
-     padding: 0.3rem;
-     padding-left: 0.3rem;
+   border-radius: 3px;
+   font-size: 15px;
+   background-color: white;
+   padding: 0.3rem;
+   @media #{$smarmini}{
+      width: 100%;
+      font-size: 1.3ex;
+      padding: 1%;
+   }
+   @media #{$smarphone}{
+      width: 100%;
+      font-size: 1.5ex;
+      padding: 1%;
+   }
+   @media #{$tablet}{
+      width: 100%;
+      font-size: 1.7ex;
+      padding: 1%;
+    }
  }
- 
+ .pasarela-login{
+   color: rgb(61, 58, 58);
+   margin-top: 5%;
+   @media #{$smarmini}{
+      font-size: 1.2ex;
+
+   }
+   @media #{$smarphone}{
+      font-size: 1.5ex;
+   }
+   @media #{$tablet}{
+      font-size: 1.7ex;
+    }
+ }
 .tarjeta_pago{
-   padding-top: 15%;
    font-size: 3rem;
+   width: 100%;
+   @include caja-flex(flex,column,center,center,nowrap);
+
+}
+.form_compra{
+   width: 100%;
+   @include caja-flex(flex,column,center,center,nowrap);
+   @media #{$smarmini}{
+      font-size: 1.2ex;
+   }
+   @media #{$smarphone}{
+      font-size: 1.5ex;
+   }
+   @media #{$tablet}{
+      font-size: 1.8ex;
+    }
 }
  
- 
- 
+.tarjeta {
+   border: 1px solid rgb(46, 41, 37);
+   border-radius: 5px;
+   width: 80%;
+   padding: 0.5rem;
+   @media #{$smarmini}{
+      padding-top:3%;
+   }
+   @media #{$smarphone}{
+      padding-top: 2%;
+   }
+   @media #{$tablet}{
+      padding-top: 2%;
+    }
+ }
+ .btn_pasarela_compra {
+    margin-top: 5%;
+     border: none;
+     border-radius: 5px;
+     padding: 0.7rem; 
+     width: auto;
+     background-color: sandybrown;
+     color: white;
+     @media #{$smarmini}{
+      margin-top: 2%;
+      padding: 1.5%;
+   }
+   @media #{$smarphone}{
+      margin-top: 2%;
+      padding: 1.2%;
+   }
+   @media #{$tablet}{
+      margin-top: 2%;
+      padding: 1.2%;
+    }
+ }
+ .btn_pasarela_compra:hover {
+    cursor: pointer;
+    background-color: rgb(255, 168, 6);
+    color: #413e3e;
+    font-weight: bold;
+ }

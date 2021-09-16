@@ -101,10 +101,16 @@ export default function Home () {
       }
     }
   }
-  const variantMotion = {
+  const variantMotion_A = {
     visible: { opacity: 1, x: 0, transition: {
       repeat: Infinity, duration:2, repeatType: "reverse", repeatDelay: 1.5, type: "tween", bounce: 0.50}},
     hidden: { opacity: 0, x: -100,},
+  }
+
+  const variantMotion_B = {
+    visible: { opacity: 1, x: 0, transition: {
+      repeat: Infinity, duration:2, repeatType: "reverse", repeatDelay: 1.5, type: "tween", bounce: 0.50}},
+    hidden: { opacity: 0, x: 100},
   }
 
   function searchInput () {
@@ -132,43 +138,46 @@ export default function Home () {
     <div className="home">
         <div className='principalHome'>
           <motion.div variants={majorMotion} initial='hidden' animate='visible' className='carouselMajor'>
-          <motion.div className="carousel" variants={variantMotion}>
-          <img src={undraw} alt="imagenPresentacion" className="imagenPresentacion"></img>
+          <motion.div className="carousel_A" variants={variantMotion_A}>
+          <img src={undraw} alt="imagenPresentacion" className="imagenPresentacion_A"/>
           <div className="titulos_carousel">
             {profile && profile.nombre ? <h2>{`¡Bienvenido ${profile.nombre}!`}</h2>:<h2>¡Bienvenido!</h2>}
-            <h4>Compra tus libros esenciales aquí</h4>
            </div>
           </motion.div>
-          <motion.div className="carousel" variants={variantMotion}>
+          <motion.div className="carousel_B" variants={variantMotion_B}>
          {!profile ? <a className="link_carousel" href={`${APP}/registerUser`}>
-            <img src={undraw2} alt="imagenPresentacion" className="imagenPresentacion"></img>
+            <img src={undraw2} alt="imagenPresentacion" className="imagenPresentacion_B"></img>
             <div className="titulos_carousel">
                   <h2>Regalos por registro</h2><h4>¡Regístrate gratis y obtén muchos beneficios!</h4>
             </div>
           </a> : <div className="link_carousel" href={`${APP}/registerUser`}>
-            <img src={undraw2} alt="imagenPresentacion" className="imagenPresentacion"></img>
+            <img src={undraw2} alt="imagenPresentacion" className="imagenPresentacion_B"></img>
             <div className="titulos_carousel">
-                 { promo[0] ? (<><h2>¡Aprovecha nuestra Promocion!</h2><h4>{promo[0].porcentaje} % de descuento en </h4><h4>{promo[0].genero.map(e=><label>{e}</label>)}</h4></>): (<><h2>Promociones continuamente</h2><h4>¡Cada semana tenemos nuevas promociones!</h4></>)}
+                 { promo[0] ? (<><h3>¡Promociones!</h3><h5>{promo[0].porcentaje} % de descuento </h5><div style={{display:'flex',justifyContent:'space-around'}}>{promo[0].genero.map((e,i)=><p key={i} className='titulos_carousel_p' >{e}</p>)}</div></>): (<><h2>Promociones continuamente</h2><h4>¡Cada semana tenemos nuevas promociones!</h4></>)}
             </div>
           </div>}
           </motion.div>
           </motion.div>
-          <div className="e_books"><h1>E-Books</h1></div>
-          <div className="paginado">
-            {currentPag > 0 &&  <button className="botonPrev" onClick={prevPage}>
-                <MdKeyboardArrowLeft/>
-              </button>
-            }
-            {((currentPag + 1 )* cards) < books.length && <button className="botonNext" onClick={nextPage}>
-                <MdKeyboardArrowRight/>
-              </button>
-            }
-          </div>
-          <div className="botones_generos">
-            <div className="box_generos">
-              {genders.map((gen) => <button key={gen} id={gen} className="generos" onClick={typesFilter}>{gen}</button>)}
+          <div className='container_home'>
+            <div className='container_home_pag'>
+              <div className='e-books-h1'><h1 className='e-books-h1_i'>E-Books</h1></div>
+              <div className="paginado">
+                {currentPag > 0 &&  <button className="botonPrevNext" onClick={prevPage}>
+                    <MdKeyboardArrowLeft className="botonPrevNext_b"/>
+                  </button>
+                }
+                {((currentPag + 1 )* cards) < books.length && <button className="botonPrevNext" onClick={nextPage}>
+                    <MdKeyboardArrowRight className="botonPrevNext_b"/>
+                  </button>
+                }
+              </div>              
             </div>
-            {books.length !== allBooks.length && <button id='cleanButton' className='cleanButton' onClick={categoryClear}>Limpiar filtro</button>}
+            <div className="botones_generos">
+              <div className="box_generos">
+                {genders.map((gen) => <button key={gen} id={gen} className="generos" onClick={typesFilter}>{gen}</button>)}
+              </div>
+              {books.length !== allBooks.length && <button id='cleanButton' className='cleanButton' onClick={categoryClear}>Borrar</button>}
+            </div>            
           </div>
           <div className="books">
             {searchInput()}

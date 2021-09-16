@@ -92,7 +92,7 @@ export default function RecoverPopUp (){
         <ReactCircleModal 
             backgroundColor="rgb(244, 164, 96)"
             toogleComponent={onClick => <button className="openPop" onClick={onClick}>
-                ¿Olvidaste tu contraseña?
+                ¿Olvidaste la contraseña?
                 </button>
             }
             offsetX={0}
@@ -119,6 +119,7 @@ export default function RecoverPopUp (){
                     <input 
                         type="text"   
                         name="code" 
+                        className='inputrecover'
                         value={state.code}
                         onChange={handleChange}
                         placeholder="Introduce aqui el codigo que enviamos a tu correo"

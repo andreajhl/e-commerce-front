@@ -52,10 +52,10 @@ export default function NavBar() {
     function leftBarFunction(){
       let leftNavBar = document.getElementById('leftNavBar');
       if( leftBarState ){
-        leftNavBar.style.left = '-400px';
+        leftNavBar.style.left = '-100vw';
         setleftBarState(false);
       }else{
-        leftNavBar.style.left = '0px';
+        leftNavBar.style.left = '0vw';
         setleftBarState(true);
       }; 
     };
@@ -64,10 +64,10 @@ export default function NavBar() {
       let rightNavBar = document.getElementById('rightNavBar');
       <Cart/>
       if( rightBarState ){
-        rightNavBar.style.top = '-100vh';
+        rightNavBar.style.right='-100vw';
         setrightBarState(false);
       }else{
-        rightNavBar.style.top = '0px';
+        rightNavBar.style.right='0vw'
         setrightBarState(true);
       };
     };
@@ -75,22 +75,22 @@ export default function NavBar() {
     function loginBarFunction(){
       let loginNavBar = document.getElementById('loginNavBar');
       if( loginBarState ){
-        loginNavBar.style.top = '-110vh';
+        loginNavBar.style.right='-100vw';
         setloginBarState(false);
       }else{
-        loginNavBar.style.top = '-20px';
+        loginNavBar.style.right='0vw'
         setloginBarState(true);
       };
     };
 
-  const openModal = async() => {
-    let logModal = document.getElementById('logModal')
-    let ninjaButton = document.getElementById('buttonsForms')
-    ninjaButton.style.opacity = '0';
-    ninjaButton.style.zIndex = '1'
-    logModal.style.opacity = '1';
-    logModal.style.zIndex = '2'
-  }
+  // const openModal = async() => {
+  //   let logModal = document.getElementById('logModal')
+  //   let ninjaButton = document.getElementById('buttonsForms')
+  //   ninjaButton.style.opacity = '0';
+  //   ninjaButton.style.zIndex = '1'
+  //   logModal.style.opacity = '1';
+  //   logModal.style.zIndex = '2'
+  // }
 
   const openRegisModal = () => {
     loginBarFunction();
@@ -106,53 +106,60 @@ export default function NavBar() {
 
   return (
   <div className="nav_principal">
-    <div>
     <div className='mainNavBar'>
-      {url === "/" && <div>
+      {url === "/" ? <div>
         <button className = {leftBarState ? "leftNavBarButton_active" : "leftNavBarButton_inactive"} onClick={ leftBarFunction }>
             <MdMenu className="icono_nav"/>
         </button>
             <div id='leftNavBar'>
-            <Ordenamiento  />
+              <Ordenamiento  />
             </div>
-      </div>} 
-    <div className="titulo_principal">
-      <NavLink  className="titulo_b" to={'/'}>
-      <img className="img_logo_nav" src={Logo} alt="logo"/>
-      </NavLink>
-        </div>  
-          <Search />
-        <button className="sucursales_button_home"><NavLink to='/sucursales' style={{textDecoration: "none", color:"white"}}>Sucursales</NavLink></button>
-        {user && !user.admin && <button className="sucursales_button_home"><NavLink to='/whishlist' style={{textDecoration: "none", color:"white"}}>Lista de Deseos</NavLink></button>}
-          <div className="icono_Usuario">
-          <div id={loginBarState? "loginNavBarbutton_active" : "loginNavBarbutton_inactive"} className="loginNavBarbutton" onClick={ loginBarFunction }>
-          {user && user.uid ? <img className='profileImg' src={profileImg.foto} alt="imagen de perfil" /> : <MdAccountCircle/>}
-          </div>
-  <div id ="loginNavBar">
-    <div id ="buttonsForms" >
-      {!user?(<div>
-         <button onClick={openModal} className="userLoginButton">Acceder</button>
-         <button className="userLoginButton" onClick={openRegisModal}>Registrarse</button>
-        </div>
-       ):
-      (<div>
-        {user? user.admin ? <OpcionesAdmin /> : <OpcionesUser/>: null}
-        <button onClick={locaLogout}  className="userLoginButtonSesion"> Cerrar Sesión </button>
-        </div>)}
-    </div>
-    <LoginForms loginBarFunction={loginBarFunction} />
-  </div>
-  </div>
-       </div>
-         { (!user || !user.admin) && <div>
-            <div id={rightBarState? "rightNavBarButton_active" : "rightNavBarButton_inactive"} className="rightNavBarButton" onClick={ rightBarFunction }>
-            <MdShoppingCart className="icono_nav_der"/> <span className="numero_icono">{Object.values(carts).length}</span>
-            </div>           
-            <div id ="rightNavBar">
-            <Cart/>
+      </div> : <div></div>} 
+      <div className='cantainer-principal-nav'>
+           <div className="titulo_principal">
+            <NavLink to={'/'}>
+            <img className="img_logo_nav" src={Logo} alt="logo"/>
+            </NavLink>
+          </div>  
+          <div className='search1'>
+              <Search />
             </div>
-          </div>} 
+            <div className='div-sucurandDeseos'>
+              <button className="sucursales_button_home"><NavLink to='/sucursales' style={{textDecoration: "none", color:"white"}}>Tiendas</NavLink></button>
+              {user && !user.admin && <button className="sucursales_button_home"><NavLink to='/whishlist' style={{textDecoration: "none", color:"white"}}>Deseos</NavLink></button>}                
+            </div>
+            <div className='user-cart'>
+              <div>
+                <div className="icono_Usuario">
+                    <div id={loginBarState? "loginNavBarbutton_active" : "loginNavBarbutton_inactive"} className="loginNavBarbutton" onClick={ loginBarFunction }>
+                    {user && user.uid ? <img className='img_perfil_nav' src={profileImg.foto} alt="imagen de perfil" /> : <MdAccountCircle className='img_perfil_nav_i'/>}
+                    </div>  
+                    <div id ="loginNavBar">
+                      <div id ="buttonsForms" >
+                        {!user?(<div>
+                            <LoginForms loginBarFunction={loginBarFunction}/>
+                            <div className="userLoginButton"><p className="userLoginButton_t">¿No tienes cuenta?</p><button className="userLoginButton_i" onClick={openRegisModal}>Registrate</button></div>
+                          </div>
+                        ):
+                        (<div>
+                            {user? user.admin ? <OpcionesAdmin /> : <OpcionesUser/>: null}
+                            <button onClick={locaLogout}  className="userLoginButtonSesion"> Cerrar Sesión </button>
+                          </div>)}
+                      </div>
+                  </div>      
+                </div>                
+              </div>
+                { (!user || !user.admin) && <div>
+                <div id={rightBarState? "rightNavBarButton_active" : "rightNavBarButton_inactive"} className="rightNavBarButton" onClick={ rightBarFunction }>
+                <MdShoppingCart className="icono_nav_der"/> <span className="numero_icono">{Object.values(carts).length}</span>
+                </div>           
+                <div id ="rightNavBar">
+                <Cart/>
+                </div>
+             </div>} 
+            </div>
         </div>
+      </div>
     </div> 
   );
 };

@@ -1,13 +1,24 @@
+@import '../global.scss';
 .openPop{
     border: none;
-    width: 13rem;
-    margin-left: -1rem;
-    padding: 0.7rem;
-    border-radius: 5px;
-    background-color: rgb(233, 233, 233);
-    color: black;
-    font-weight: bold;
+    width: 80%;
+    padding: 4%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.604);
+    color: #1c1b1b;
     font-size: 2vh;
+    @media #{$smarmini}{
+        font-size: 1ex;
+        width: 79%;
+    }
+    @media #{$smarphone}{
+        font-size: 1.3ex;
+        width: 70%;
+    }
+    @media #{$tablet}{
+        font-size: 1.4ex;
+        width: 90%;
+    }
 }
 
 .openPop:hover{
@@ -23,14 +34,37 @@ text-decoration: underline;
     color: white;
     font-weight: bold;
     font-size: 15px;
-    
+    width: 60%;
+    margin-left: 20%;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.8ex;
+    }
+    @media #{$tablet}{
+        font-size: 2ex;
+    }
 }
 .inputMail{
     border-style: hidden;
     margin-left: px;
     background-color: rgb(134, 128, 128, 0.2);
-    padding: 1em;
-    margin-bottom: 2em;
+    padding: 4%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+        border-radius: 5px;
+    }
+    @media #{$smarphone}{
+        font-size: 1.8ex;
+        border-radius: 5px;
+    }
+    @media #{$tablet}{
+        font-size: 2ex;
+        border-radius: 15px;
+    }
 }
 #enviaPop{
     width: 100%;
@@ -41,51 +75,97 @@ text-decoration: underline;
     color: white;
     font-weight: bold;
     font-size: 15px;
-    
+    width: 60%;
+    margin-left: 20%;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.8ex;
+    }
+    @media #{$tablet}{
+        font-size: 2ex;
+    }
+   
+}
+.igqBJM{
+    @include caja-flex(flex,column,center,center,nowrap);
 }
 .pepe{
     position: relative;
     display:grid;
     background-color:#fff; 
-    padding: 4em;
     margin-top:5%;
-    width: 40%;
+    width: 60%;
     height: 90%;
-    margin-left: 28%;
+    @media #{$smarmini}{
+        width: 80%;
+        border-radius:5px ;
+    }
+    @media #{$smarphone}{
+        width:80% ;
+        border-radius: 10px;
+    }
+    @media #{$tablet}{
+        width:80% ;
+        border-radius: 15px;
+    }
 }
 
 #pepeA{
-    padding: 4em;
-    display:grid;
     z-index: 2;
     position: absolute;
     width:100% ;
     height: 100%;
+    padding: 3%;
     transition:  all 0.5s ease-in-out;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+
+    }
 }
 
 #pepeB{
-    display: grid;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 10%;
+    padding: 5%;
     height: 100%;
     width:100% ;
-    display:grid;
     opacity: 0;
     z-index: 1;
     transition:  all 0.5s ease-in-out;
-    }
 
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
+}
+.inputrecover{
+    background-color: rgb(134, 128, 128, 0.2);
+    padding: 3%;
+    border:none;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+        border-radius: 5px;
+    }
+    @media #{$smarphone}{
+        font-size: 1.8ex;
+        border-radius: 10px;
+    }
+    @media #{$tablet}{
+        border-radius: 10px;
+    }
+}
 #pepeC{
     height: 100%;
     width:100% ;
     opacity: 0;
     z-index: 1;
+    padding: 3%;
     transition:  all 0.5s ease-in-out;
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -200px;
+    margin-top: -50vh;
+
 }
 
 #code{
@@ -103,7 +183,7 @@ text-decoration: underline;
 }
 
 .buttonBack{
-    margin-top: 10px;
+    margin-top: 5%;
     border: none;
     padding: 0.6rem;
     border-radius: 5px;
@@ -111,12 +191,20 @@ text-decoration: underline;
     color: white;
     font-weight: bold;
     font-size: 15px;
+    width: 60%;
+    margin-left: 20%;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
 }
 h3{
     text-align: center;
 }
 .enviaCode{
-    margin-top: 10px;
+    margin-top: 5%;
     border: none;
     padding: 0.6rem;
     border-radius: 5px;
@@ -124,13 +212,32 @@ h3{
     color: white;
     font-weight: bold;
     font-size: 15px;
+    width: 60%;
+    margin-left: 20%;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
 }
 
 .newPass{
-    border-style: hidden;
+    border:none;
     background-color: rgba(255, 255, 255, 0.2);
-    padding: 1em;
-    margin-bottom: 2em;
-    margin-top: 25px;
-    border-color:rgba(255, 255, 255, 0.2) ;
+    padding: 3%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+        border-radius: 5px;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        border-radius: 10px;
+    }
+    @media #{$tablet}{
+        font-size: 1.8ex;
+        border-radius: 10px;
+    }
 }

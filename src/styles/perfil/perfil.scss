@@ -1,64 +1,214 @@
+@import '../global.scss';
+.div_perfil{
+    width: 100%;
+    height: 95vh;
+    background-color: #f8f7f7;
 
+    @include caja-flex(flex,column,center,center,nowrap);
+}
 .userContenedor{
     height: 100vh;
-    background-color: #f8f7f7;
     display: flex;
-    padding-left: 9rem;
-    padding-top: 2rem;
+
+    @media #{$smarmini}{
+        width: 90%;
+        height: 90%;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    @media #{$smarphone}{
+        width: 90%;
+        height: 90%;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    @media #{$tablet}{
+        width: 90%;
+        height: 90%;
+        margin-left: 3%;
+        margin-top: 3%;
+    }
 }
 
 .fotoMarco{
-    border-radius: 15rem; 
-    width: 20rem;
-    height: 20rem;
-    margin-right:10rem;
-    margin-bottom: 1rem;
+    width: 80%;
+    height: auto;
+    @include caja-flex(flex,column,center,center,nowrap);
+    &_i{
+        border-radius: 100%;
+        width: 100%;
+        height: auto;
+    }
+    @media #{$smarmini}{
+        width: 100%;
+        height:auto;
+    }
+    @media #{$smarphone}{
+        width: 100%;
+        height:auto;
+    }
+    @media #{$tablet}{
+        width: 50%;
+        height:auto;
+    }
+}
+.div_p1{
+
+    @include caja-flex(flex,column,center,center,nowrap);
+    margin-right: 3%;
+    @media #{$smarmini}{
+        width: 40%;
+        height:auto;
+    }
+    @media #{$smarphone}{
+        width: 40%;
+        height:auto;
+    }
+    @media #{$tablet}{
+        width: 80%;
+        height:auto;
+      }
 }
 .table {
-    margin-top: 2rem;
+    width: 45%;
+    height: 80%;
+    @include caja-flex(flex,column,initial,center,nowrap);
+    @media #{$smarmini}{
+        padding-top: 30%;
+        width: 50%;
+    }
+    @media #{$smarphone}{
+        width: 50%;
+        padding-top: 32%;
+    }
+    @media #{$tablet}{
+        width: 50%;
+        padding-top: 2%;
+    }
 }
 
 .realButton{
-    display: flex;
-    flex-direction: column;
+    @include caja-flex(flex,column,initial,center,nowrap);
     border: none;
-    text-align: left;
+    text-align: center;
     margin-top: 1rem;
+    width: 100%;
+    height: 50%;
+
 }
 .realButton span {
-    margin-bottom: 1rem;
     font-weight: bold;
     color: #413e3e;
+    font-size: 3vh;
+    margin-bottom: 3%;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
 }
 .inputFoto {
-    border: none;
-    
+    border-radius: 10px;
+    opacity: 1;
+    width: 50%;
+    height: 15%;
+    cursor: pointer;
+    text-align: center;
+    background-color: sandybrown;
+    @media #{$smarmini}{
+        width: 80%;
+        border-radius: 5px;
+        height: 10%;
+    }
+    @media #{$smarphone}{
+        width: 80%;
+        border-radius: 5px;
+        height: 10%;
+    }
+    &_i{
+        opacity: 0;
+        width: 80%;
+    }
+    &_l{
+        color: white;
+        @media #{$smarmini}{
+            font-size: 1.4ex;
+        }   
+        @media #{$smarphone}{
+           font-size: 1.6ex;
+        }
+    }
+}
+.inputFoto:hover{
+    background-color: rgb(255, 164, 85);
+
 }
 .nombre_usuario_perfil {
     color: seagreen;
     font-weight: bold;
-    font-size: 2rem;
+    text-align: left;
+    font-size: 3.5vh;
     margin-bottom: 2rem;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+        text-align: center;
+        margin-bottom: 3%;
+    }
+    @media #{$smarphone}{
+        font-size: 1.8ex;
+        text-align: center;
+        margin-bottom: 3%;
+     }
 }
 .email_perfil {
     text-align: left;
-    font-size: 1.2rem;
+    font-size:3.3vh;
     font-weight: 600;
     color: #413e3e;
     margin-bottom: 2rem;
+    @media #{$smarmini}{
+        font-size: 1.5ex;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+    @media #{$smarphone}{
+        font-size: 1.7ex;
+        margin-bottom: 3%;
+        text-align: center;
+     }
 }
 .rol_perfil {
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 3.3vh;
     font-weight: 600;
     color: #413e3e;
     margin-bottom: 2rem;
+    @media #{$smarmini}{
+        font-size: 1.5ex;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+    @media #{$smarphone}{
+        font-size: 1.7ex;
+        margin-bottom: 3%;
+        text-align: center;
+     }
 }
 .perfil_usuario_titulo {
     background-color: #f8f7f7;
-    font-size: 2rem;
+    font-size: 4vh;
     padding-top: 1rem;
     color: #413e3e;
+    width: auto;
+    @media #{$smarmini}{
+        font-size: 2ex;
+        padding-top: 5%;
+    }
+    @media #{$smarphone}{
+        font-size: 2.2ex;
+        padding-top: 5%;
+     }
 }
 .select_user {
     width: 20rem;
@@ -76,6 +226,32 @@
     color: white;
     font-weight: bold;
     position: relative;
+}
+.guardar_input{
+    cursor: pointer;
+    text-align: center;
+    background-color: sandybrown;
+    border:none;
+    color: white;
+    @media #{$smarmini}{
+        width: auto;
+        height: auto;
+        border-radius: 5px;
+        padding: 3%;
+        font-size: 1.2ex;
+        margin-top: 18%;
+    }
+    @media #{$smarphone}{
+        width: auto;
+        height: auto;
+        border-radius: 5px;
+        padding: 3%;
+        font-size: 1.4ex;
+        margin-top: 18%;
+     }
+}
+.guardar_input:hover{
+    background-color: rgb(255, 164, 85);
 }
 .eliminar_usuario_perfil:hover {
 cursor: pointer;

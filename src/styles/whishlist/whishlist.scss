@@ -1,13 +1,33 @@
+@import '../global.scss';
+
+
 .wishlist{
-   padding-top: 5%;
-   padding-left: 5%;
+    width: 100%;
    height: 100vh;
    background-color: #f8f7f7;
+   @include caja-flex(flex,column,center,center,nowrap);
     &_container{
+      width: 90%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap:3rem;
+        @media #{$smarmini}{
+          grid-template-columns: repeat(2, 1fr);
+          gap: 5%;
+        }
+        @media #{$smarphone}{
+          grid-template-columns: repeat(2, 1fr);
+          gap: 5%;
+        }
+        @media #{$tablet}{
+          width: 95%;
+          padding-left: 3%;
+          grid-template-columns: repeat(3, 1fr);
+          column-gap:1%;
+       }
+
     }
+
 }
 
 .libro_W {
@@ -15,7 +35,21 @@
     height: 24rem;
     border-radius: 10px;
     background-color: rgb(233, 233, 233);
-   
+    @media #{$smarmini}{
+      height: 40vh;
+      width: 40vw;
+      border-radius: 7px; 
+    }
+    @media #{$smarphone}{
+      height: 42vh;
+      width: 40vw;
+      border-radius: 7px; 
+    }      
+    @media #{$tablet}{
+      height: 45vh;
+      width: 30vw;
+      border-radius: 7px; 
+   }
   }
   
   .producto_W {
@@ -23,7 +57,19 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    @media #{$smarmini}{
+      height:20vh;
+      line-height: 150%;
+    }
+    @media #{$smarphone}{
+      height:20vh;
+      line-height: 150%;
+    }
+    @media #{$tablet}{
+      height:20vh;
+      line-height: 150%;
   }
+}
   .titulo_W{
     font-weight: bold;
     margin-bottom: 1.5rem;
@@ -31,23 +77,57 @@
     font-size: 17px;
     height: 1rem;
     color: #181717;
-   
-    
+    @media #{$smarmini}{
+      font-size: 1.2ex;
+      margin-bottom:4%;
+      line-height: 120%;
+    }
+    @media #{$smarphone}{
+      font-size: 1.6ex;
+      margin-bottom:4%;
+      line-height: 120%;
+    }
+    @media #{$tablet}{
+      font-size: 1.8ex;
+      margin-bottom:4%;
+      line-height: 120%;
+   }
   }
   .imagen_W {
     width: 10rem;
     height: 14rem;
     margin-top: -1rem;
     z-index: 0;
-   
+    @media #{$smarmini}{
+      height: 22vh; 
+      width: 80%;
+    }
+    @media #{$smarphone}{
+      height: 22vh; 
+      width: 80%;
+    }
+    @media #{$tablet}{
+      height: 25vh; 
+      width: 80%;
+   }
   }
   .autor_W {
     height: 2rem;
     color: #413e3e;
     font-weight: bold;
     margin-top: 0.5rem;
-    
-   
+    @media #{$smarmini}{
+      font-size: 1ex;
+      margin-top: 0px;
+    }
+    @media #{$smarphone}{
+      font-size: 1.4ex;
+      margin-top: 0px;
+    }   
+     @media #{$tablet}{
+      font-size: 1.6ex;
+      margin-top: 0px;
+   }
   }
   .producto_PDW {
       display: flex;
@@ -60,10 +140,28 @@
       border: none;
       background: none;
       cursor: pointer;
+      @media #{$smarmini}{
+        font-size: 2.4ex;
+        height: 7vh;
+        margin-bottom: 5%;
+        margin-left: 70%;
+      }
+      @media #{$smarphone}{
+        font-size: 3.4ex;
+        height: 7vh;
+        margin-bottom: 5%;
+        margin-left: 70%;
+      }
+      @media #{$tablet}{
+        font-size: 3.8ex;
+        height: 7vh;
+        margin-bottom: 6%;
+        margin-left: 70%;
+     }
     }
   }
   .producto_PDW_delete:hover {
-    color: rgb(248, 153, 153);
+    color: rgb(253, 62, 62);
   }
   
   

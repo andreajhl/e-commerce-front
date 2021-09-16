@@ -1,58 +1,142 @@
+@import '../global.scss';
+
+
 .libro {
-    width: 15rem;
-    height: 24rem;
+    width: 15vw;
+    height: 50vh;
     margin: auto;
     border-radius: 10px;
     margin-bottom: 2rem;
     background-color: rgb(233, 233, 233);
-   
+    @media #{$smarmini}{
+      height: 40vh;
+      width: 40vw;
+      border-radius: 7px; 
+    }
+    @media #{$smarphone}{
+      height: 45vh;
+      width: 40vw;
+      border-radius: 7px; 
+    } 
+    @media #{$tablet}{
+      height: 55vh;
+      width: 30vw;
+      border-radius: 7px; 
+    } 
   }
   
   .producto {
-    margin: 0px;
     width: 100%;
     height: 100%;
     z-index: 0;
+    @media #{$smarmini}{
+      height:20vh;
+      line-height: 150%;
+    }
+    @media #{$smarphone}{
+      height:20vh;
+      line-height: 150%; 
+    } 
+    @media #{$tablet}{
+      height:20vh;
+      line-height: 150%; 
+    } 
   }
   .titulo {
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 15%;
     margin-top: 0.5rem;
-    font-size: 17px;
+    font-size: 2vh;
     height: 1rem;
+    line-height: 120%;
     color: #181717;
-   
-    
+    @media #{$smarmini}{
+      font-size: 1.2ex;
+      margin-bottom:4%;
+      line-height: 120%;
+    }
+    @media #{$smarphone}{
+      font-size: 1.4ex;
+      margin-bottom:4%;
+      line-height: 120%;
+    } 
+    @media #{$tablet}{
+      font-size: 1.6ex;
+      margin-bottom:10%;
+      line-height: 120%;
+
+    } 
   }
   .imagen {
-    width: 9rem;
-    height: 12rem;
+    width: 80%;
+    height: 28vh;
     margin-top: -1rem;
-    z-index: 0;
-   
+    z-index: -1;
+    @media #{$smarmini}{
+      height: 20vh; 
+      width: 80%;
+    }
+    @media #{$smarphone}{
+      height: 24vh; 
+      width: 80%;
+    } 
+    @media #{$tablet}{
+      height: 28vh; 
+      width: 80%;
+    } 
   }
   .autor {
-    height: 2rem;
     color: #413e3e;
     font-weight: bold;
-    margin-top: 1rem;
-    
-   
+    font-size: 1.8vh;
+    @media #{$smarmini}{
+      font-size: 1ex;
+    }
+    @media #{$smarphone}{
+      font-size: 1.2ex;
+    } 
+    @media #{$tablet}{
+      font-size: 1.4ex;
+    } 
   }
   .precio {
     color: #666666;
     font-weight: bold;
-   
-    
+    font-size: 1.8vh;
+    margin-top: 3%;
+    @media #{$smarmini}{
+      font-size: 1ex;
+      margin-top: 1%;
+    }    
+    @media #{$smarphone}{
+      font-size: 1.2ex;
+      margin-top: 1%;
+    } 
+    @media #{$tablet}{
+      font-size: 1.4ex;
+      margin-top: 1%;
+    } 
   }
   .peso {
     color: #FD9727;
-    
   }
   .vacio {
     color: red;
     font-weight: bold;
-    font-size: 0.9rem;
+    margin-top: 3%;
+    font-size: 1.8vh;
+    @media #{$smarmini}{
+      font-size: 1ex;
+      margin-top: 2%;
+    }
+    @media #{$smarphone}{
+      font-size: 1.2ex;
+      margin-top: 2%;
+    }
+    @media #{$tablet}{
+      margin-top: 2%;
+      font-size: 1.4ex;
+    } 
   }
   .producto_PD {
     display: flex; 
@@ -66,14 +150,32 @@
       background-color:sandybrown;
       border-left: 0.5px solid black;
       border-right: 0.5px solid black;
-      height: 4rem;
+      height: 6.5vh;
       width: 3.8rem;
       color: white;
       font-weight: bold;
-      font-size: 14px;
+      font-size: 1.8vh;
       padding-top: 4%;
       margin-right: 20%;
-
+      margin-left: 10%;
+      @media #{$smarmini}{
+        font-size: 0.8ex;
+        height: 6vh;
+        width:10vw;
+        margin-bottom: 5%;
+      }
+      @media #{$smarphone}{
+        font-size: 1.2ex;
+        height: 6vh;
+        width:auto;
+        margin-bottom: 5%;
+      }
+      @media #{$tablet}{
+        font-size: 1.4ex;
+        height: 8vh;
+        width:auto;
+        margin-bottom: 5%;
+      } 
       &_i{
         width:9rem
       }
@@ -81,21 +183,49 @@
     }
 
     &_deseo{
-      height: 3.5rem;
+      height: 8vh;
       z-index: 1;
-      font-size: 25px;
+      font-size: 3.5vh;
       color: rgb(221, 98, 98);
       border: none;
       background: none;
       cursor: pointer;
-
+      margin-left: 10%;
+      @media #{$smarmini}{
+        font-size: 1.5ex;
+        height: 7vh;
+        margin-bottom: 5%;
+        margin-left: 15%;
+      }
+      @media #{$smarphone}{
+        font-size: 2.3ex;
+        height: 7vh;
+        margin-bottom: 3%;
+        margin-left: 20%;
+      }
+      @media #{$tablet}{
+        font-size: 3ex;
+        height: 7vh;
+        margin-top: 3%;
+        margin-bottom: 6%;
+        margin-left: 25%;
+      } 
       &_content{
         height: 3.5rem;
+        @media #{$smarmini}{
+          height: 7vh;
+        }
+        @media #{$smarphone}{
+          height: 7vh;
+        }
+        @media #{$tablet}{
+          height: 7vh;
+        } 
       }
     }
   }
   .producto_PD_deseo:hover {
-    color: rgb(255, 113, 113);
+    color: rgb(253, 62, 62);
   }
   
   

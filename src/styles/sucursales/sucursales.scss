@@ -1,28 +1,49 @@
+@import '../global.scss';
 .map{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2%;
+    @include caja-flex(flex,column,center,center,nowrap);
     width: 60%;
     background-color: rgb(128, 128, 128, 0.5);
+    border-radius: 10px;
+    z-index: 0;
+    @media #{$smarmini}{
+        width: 80%;
+        height: 60%;
+    }
+    @media #{$smarphone}{
+        width: 80%;
+        height: 50%;
+    }   
+    @media #{$tablet}{
+        width: 80%;
+        height: 50%;
+    }
 }
 
 .container_sucursales{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include caja-flex(flex,column,space-evenly,center,nowrap);
     width: 100%;
+    height:91vh;
     background-color: #f8f7f7;
+
 }
+
 .puntero{
     background: none;
     border: none;
     font-size: 2rem;
+    @media #{$smarmini}{
+        font-size: 1.7ex;
+    }
+    @media #{$smarphone}{
+        font-size: 2ex;
+    } 
+    @media #{$tablet}{
+        font-size: 2.3ex;
+    }
 }
 .puntero:hover{
     color: white;
+   
 }
 .leaflet-container{
     width: 80%;
@@ -30,23 +51,96 @@
 }
 .text_sucursales{
     width: 100%;
+    height: auto;
+    background-color: sandybrown;
+
 }
 .sucTitle{
-    background-color: sandybrown;
+    &_i{
+        @media #{$smarmini}{
+            font-size: 1.5ex;
+        }
+        @media #{$smarphone}{
+            font-size: 1.8ex;
+        } 
+        @media #{$tablet}{
+            font-size: 2.1ex;
+        }
+    }
     color: snow;
     width: 100%;
+    height: auto;
 }
 .info{  
-    display: block;
-    background-color: sandybrown;
+    @include caja-flex(flex,column,center,center,nowrap);
     font-size: larger;
+    height: auto;
+    width: 100%;
+    &_div{
+        width: 90%;
+    }
+    &_i{
+        @media #{$smarmini}{
+            font-size: 1ex;
+        }
+        @media #{$smarphone}{
+            font-size: 1.3ex;
+        } 
+        @media #{$tablet}{
+            font-size:1.4ex;
+        }
+    }
+
+}
+.leaflet-container{
+    width: 90%;
+}
+.leaflet-control-zoom{
+    width: auto;
+}
+.leaflet-touch .leaflet-bar a:first-child{
+    @media #{$smarmini}{
+        width: 8vw;
+        height: 4vh;
+        font-size: 2ex;
+    }
+    @media #{$smarphone}{
+        width: 8vw;
+        height: 4vh;
+        font-size: 2.2ex;
+    }
+    @media #{$tablet}{
+        width: 8vw;
+        height: 4vh;
+        font-size: 2.4ex;
+    } 
+}
+.leaflet-touch .leaflet-bar a:last-child{
+    @media #{$smarmini}{
+        width: 8vw;
+        height: 4vh;
+        font-size: 2ex;
+    }
+    @media #{$smarphone}{
+        width: 8vw;
+        height: 4vh;
+        font-size: 2.2ex;
+    } 
+    @media #{$tablet}{
+        width: 8vw;
+        height: 4vh;
+        font-size: 2.4ex;
+    }
 }
 
-.imageGPS{
-    background-color:white ;
-    border-color: black;
-    border-style: solid;
-    border-radius: 50%;
-    margin-left: 25px;
-    width: 40px; height: 40px;
+.leaflet-popup-content label{
+    @media #{$smarmini}{
+        font-size: 1.3ex;
+    }    
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    } 
+    @media #{$tablet}{
+        font-size: 1.9ex;
+    }
 }

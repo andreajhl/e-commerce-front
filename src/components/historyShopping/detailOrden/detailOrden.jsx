@@ -50,18 +50,16 @@ export default function DetailOrdenAdmin (){
                         <p className="productos_compra">Productos</p>
                         {productos.map(e=> <div className="datos_libro_detalle"key={e._id}>
                                 <p className="cantidad_detalle_compra">x{e.cantidad}</p>
-                                <NavLink className=""style={{"textDecoration": "none"}}to={`/details/${e.producto._id}`}><p className="titulo_detalle_compra">{`${e.producto.titulo}`}</p></NavLink>
                             <div className="precio_datos_compra_detalle">
+                                <NavLink style={{"textDecoration": "none"}}to={`/details/${e.producto._id}`}><p className="titulo_detalle_compra">{`${e.producto.titulo}`}</p></NavLink>
                                 <p className="precio_datos_compra"><span className="peso_dato_compra">$ </span>{e.cantidad * e.producto.precio}</p>
-
                             </div>
                         </div>
                         )}
                         <div className="total_compra_titulo">
-                        <p className="total_compra_detalle">Total:</p>
-                        <div className="precio_total_compra_detalle">
+                            <p className="total_compra_detalle">Total:</p>
                             <p className="valor_total_compra"><span className="peso_total_compra">$</span>{state.valorTotal}</p>
-                        </div>
+
                         </div>
                     </div>
                     </div>
@@ -70,7 +68,7 @@ export default function DetailOrdenAdmin (){
                         <p>{state.direccion}</p>
                     </div>
                     <div className="estado_pedido_orden">
-                    <p className="estado_pedido">Estado del Pedido: <span>{state.estado[0].toUpperCase() + state.estado.slice(1)}</span></p>
+                    <p className="estado_pedido">Estado de la compra: <span>{state.estado[0].toUpperCase() + state.estado.slice(1)}</span></p>
                     {admin && state.estado!=='completada' && state.estado!=='cancelada' &&<Select
                             options={state.estado==='creada'? opcion1 : opcion2}
                             onChange={(e)=>dispatch(updateOrden(e.value,state._id,token))}

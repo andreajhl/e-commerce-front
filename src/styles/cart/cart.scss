@@ -1,148 +1,380 @@
+@import '../global.scss';
+
+.div_cart{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    padding-top:20vh;
+    @media #{$tablet}{
+        padding-top: 23vh;
+      }
+      @media #{$pantallaGrande}{
+        padding-top: 25vh;
+      }
+}
+.cart-h3{
+    width: 100%;
+    font-size: 2.5vh;
+    height: 10%;
+    @media #{$smarmini}{
+        font-size: 1.5ex;
+    }
+    @media #{$smarphone}{
+        font-size: 2ex;
+    }
+    @media #{$tablet}{
+        font-size: 2.5ex;
+     } 
+}
+
+.contenedor-padre-cart{
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 75%;
+
+}
 .cart_contenedor {
     overflow-y: auto;
-    margin-top: 3rem;
-    height: 20rem;
-    width: 25rem;
+    height: 75%;
+    margin-bottom:15% ;
+    width: 100%;
+
 }
-
-
 .cart {
     background-color: rgba(145, 175, 214, 0.438);
-    padding-top: 0.5rem;
-    border-radius: 5px;
-    margin-bottom: 0.5rem;
-    border-radius: 5px;
-    margin-left: 0.5rem; 
-    margin-top: 1rem;
-}
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 15px;
+    margin:5%;
+    width: 90%;
+    height: auto;
 
-.cart_info {
-    display: flex;
-    width: 23rem;
-    margin-top: 1rem;
-    
+    &_info{
+        display: flex;
+        margin-top: 1rem;
+        @media #{$smarmini}{
+            width:100% ;
+            border-radius: 5px;
+        }
+        @media #{$smarphone}{
+            width:100% ;
+            border-radius: 8px;
+        }
+        @media #{$tablet}{
+            width: 100%;
+            border-radius: 10px;
+          }
+    }
+}
+.cartsButton {
+    cursor: pointer;
+    float: right;
+    width: 10%;
+    height: 10%;
+    font-size: 2.3vh;
+    @media #{$smarmini}{
+        font-size: 1ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.4ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.8ex;
+      }
+}
+.cart_info{
+    width: 100%;
+    height: 75%;
+
 }
 
 .cart_data {
     text-align: center;
-    width: 24rem;
+    width: 100%;
+    margin-right: 3%;
+    @media #{$smarmini}{
+        margin-right: 5%;
+    }
+    @media #{$smarphone}{
+        margin-right: 5%;
+    }
+    @media #{$tablet}{
+        margin-right: 5%;
+      }
+}
+.btn_add {
+    width: 100%;
+    height: 10%;
+    &_i{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 20%;
+        margin-left: 75%;
+    }
+
+}
+.cart_peso {
+    display: flex; 
 }
 .titulo_cart {
-    font-size: 1rem;
+    font-size: 1.9vh;
     font-weight: bold;
+    @media #{$smarmini}{
+        font-size: 1ex;
+    }
+    @media #{$smarphone}{
+       font-size: 1.4ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.8ex;
+      }
 }
 .autor_cart {
-    font-size: 0.9rem;
+    font-size: 1.7vh;
+    @media #{$smarmini}{
+        font-size: 0.9ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.2ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.5ex;
+      }
 }
 .contador {
     background-color: rgb(199, 198, 198);
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    border-radius: 4rem;
+    font-size: 3vh;
+    padding-top: 1%;
+    @include caja-flex(flex,column,center,center,nowrap);
+    border-radius: 100%;
     width: 4rem;
-    margin-left: 1rem;
+    height: auto;
+    @media #{$smarmini}{
+        font-size: 1ex;
+        padding: 1%;
+        margin-right: 5%;
+        margin-left: 3%;
+        height: 2.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.8ex;
+        padding-top: 3%;
+        margin-right: 5%;
+        height: 4.3ex;
+        margin-left: 3%;   
+    }
+    @media #{$tablet}{
+        font-size: 2.4ex;
+        padding-top: 3%;
+        margin-right: 5%;
+        height: 4ex;
+        margin-left: 3%; 
+      }
 }
 .cart_precio {
     margin-bottom: 0.5rem;
     color: #413e3e;
     font-weight: bold;
+    font-size: 1.7vh;
     margin-right: 0.5rem;
     margin-top: 0.5rem;
+    @media #{$smarmini}{
+        font-size: 1ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.4ex;  
+    }
+    @media #{$tablet}{
+        font-size: 1.8ex;
+      }
 }
-.cart_peso {
-    display: flex;
-    
-}
+
 .peso_cart {
     color: sandybrown;
     font-weight: 500;
     margin-right: 0.2rem;
+
 }
 
-.btn_add {
-    text-align: right;
-    margin-right: 1rem;    
-}
 .carts_add {
-    font-size: 1.5rem;
+    font-size: 3vh;
     margin-right: 0.3rem;
+    @media #{$smarmini}{
+        font-size: 1.1ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.4ex;   
+    }
+    @media #{$tablet}{
+        font-size: 1.8ex;
+      }
 }
 .carts_add:hover {
     cursor: pointer;
     color: green;   
 }
 .carts_add_red {
-    font-size: 1.5rem;
+    font-size: 3vh;
     margin-right: 0.3rem;
+    @media #{$smarmini}{
+        font-size: 1.1ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.4ex;   
+    }
+    @media #{$tablet}{
+        font-size: 1.8ex;
+      }
 }
 .carts_add_red:hover {
     cursor: pointer;
     color: red;   
+
 }
-.total_cart{
-    margin-top: 2rem;
-    color: #413e3e;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.cart_total {
-    margin-right: 12rem;
-    font-weight: bold;
-    font-size: 1.4rem;
-}
+
 .cart_linea {
-    width: 20rem;
-    margin-left: 4.8rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    width: 90%;
+    
+    margin-top: 5%;
     border: 0.3px solid black;
+    @media #{$smarmini}{
+        margin-left: 10%;
+        margin-bottom: 0%;
+    }
+    @media #{$smarphone}{
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-bottom: 0%;  
+    }
+    @media #{$tablet}{
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-bottom: 0%;  
+      }
 }
 .total_peso {
     color: sandybrown;
     font-weight: bold;
     margin-right: 0.3rem;
 }
-.cart_limpiar {
-    font-size: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    padding: 0.7rem;
-    margin-left: 15rem;
-    font-weight: bold;
-}
-.cart_limpiar:hover {
-    cursor: pointer;
-    background-color: rgb(95, 88, 88);
-    color: white;
-    font-weight: bold;
+
+.confirm_div{
+    width: 100%;
+    height: 15%;
+    @include caja-flex(flex,column,center,center,nowrap);
 }
 .btn_confirm {
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    padding: 0.7rem; 
-    margin-bottom: 2rem;
-    background-color: sandybrown;
-    color: white;
+    width: 85%;
+    height: 30%;
+    @include caja-flex(flex,column,center,center,nowrap);
+    &_i{
+        height: 100%;
+        width: auto;
+        border: none;
+        border-radius: 5px;
+        padding: 0.7rem; 
+        margin-bottom: 2rem;
+        background-color: sandybrown;
+        color: white;
+        margin-top: 25%;
+        font-size: 2vh;
+        @media #{$smarmini}{
+            font-size: 1ex;
+            padding: 1%;
+            margin-top: 35%;
+        
+        }
+        @media #{$smarphone}{
+            font-size: 1.6ex;
+            width:60% ;
+            padding: 3%;
+            margin-top: 35%;
+        }
+        @media #{$tablet}{
+            font-size: 2ex;
+            width:60% ;
+            padding: 3%;
+            height: 100%;
+            margin-top: 35%; 
+          }
+    }
+
 }
-.btn_confirm:hover {
+.btn_confirm_i:hover {
     cursor: pointer;
     background-color: rgb(255, 168, 6);
     color: #413e3e;
     font-weight: bold;
 }
+.total_cart {
+    @include caja-flex(flex,column,center,center,nowrap);
+    width: 100%;
+    height: 30%;
+    margin-bottom: 2%;
+    &_i{
+        color: #413e3e;
+        font-weight: bold;
+        font-size: 2.3vh; 
+        width: auto;
+        @media #{$smarmini}{
+            font-size: 1.2ex;
+        }
+        @media #{$smarphone}{
+            font-size: 1.6ex;
+        }
+        @media #{$tablet}{
+            font-size: 2ex; 
+          }
+    }
+}
 
+.cart_limpiar {
+    margin-left: 50%;
+    height: 30%;
+    width: 20%;
+    justify-content: right;
+    margin-top: 10%;
+    &_i{
+
+    border: none;
+        border-radius: 5px;
+        padding: 2%;
+        font-weight: bold;
+        font-size: 2vh;
+        @media #{$smarmini}{
+            font-size: 1ex;
+        }
+        @media #{$smarphone}{
+            font-size: 1.5ex;
+        }
+        @media #{$tablet}{
+            font-size: 2ex; 
+          }
+    }
+    @media #{$smarmini}{
+        margin-left: 50%;
+        margin-top: 2%;
+    }
+    @media #{$smarphone}{
+        margin-top: 13%;
+        margin-left: 60%;
+    }
+    @media #{$tablet}{
+        margin-top: 15%;
+        margin-left: 60%;
+      }
+}
+.cart_limpiar_i:hover {
+    cursor: pointer;
+    background-color: rgb(95, 88, 88);
+    color: white;
+    font-weight: bold;
+}
 .confirm_text {
     color: black;
     font-weight: bold;
-}
-
-.cartsButton {
-    cursor: pointer;
-    float: right;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
 }
 .cartsButton:hover {
     color: red;
@@ -150,4 +382,15 @@
 
 .carrito_vacio {
     margin-top: 5rem;
+    font-size: 2.3vh;
+    line-height: 200%;
+    @media #{$smarmini}{
+        font-size: 1.2ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.8ex;
+    }
+    @media #{$tablet}{
+        font-size: 2ex;
+      }
 }

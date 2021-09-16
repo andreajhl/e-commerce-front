@@ -1,0 +1,14 @@
+$smarmini:"(max-width: 340px)";
+$smarphone:"(min-width: 340px) and(max-width: 480px)";
+$tablet:"(min-width:480px) and (max-width:728px)";
+$desktop:"(min-width:728px) and(max-width: 983px)";
+$pantallaGrande:"(min-width: 983px)";
+$pantallaExtraGrande:"(min-width: 1550px)";
+
+@mixin caja-flex ($flex,$direction,$principal, $cruzado, $wrap){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $principal;
+    align-items: $cruzado;
+    flex-wrap: $wrap;
+}

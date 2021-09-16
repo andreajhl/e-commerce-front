@@ -1,146 +1,405 @@
+@import '../global.scss';
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    width: 100%;
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+  .img_carga {
+    margin-left: 30%;
+  }
+  .noEncontrado {
+    text-align: center;
+    width: 80vw;
+    margin-top: 10%;
+    color: rgb(97, 95, 95);
+    @media #{$smarmini}{
+      padding-left: 50%;
+      font-size: 1.8ex;
+    }
+    @media #{$smarphone}{
+      margin-left: 10vw;
+      font-size: 2ex;
+    }
+    @media #{$tablet}{
+      margin-left: 10vw;
+      font-size: 2.5ex;
+    }
+  }
   
-  
-  .home {
+.home {
     background-color: #f8f7f7;
     user-select: none;
+    width: 100%;
+    height: 100%;
+    @include caja-flex(flex,column,center,center,nowrap);
+}
+
+.principalHome{
+  width: 100%;
+  height: 90vh;
+  justify-content: space-between;
+  @media #{$smarphone}{
+    height: 90%;
+  }
+
+}
+
+.carouselMajor{
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(250, 220, 164);
+  width: 100%;
+  height: 20%;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  @media #{$smarmini}{
+    height: 10%;
+  }
+  @media #{$smarphone}{
+    height:15%;
+  }
+  @media #{$tablet}{
+    height:18%;
+  }    
+}
+.carousel_A {
+  background-color: rgba(255, 255, 255, 0.336);
+  width: 38%;
+  left: 1%;
+  margin-right: 10%;
+  height: 18vh;
+  border-radius: 15px; 
+  display: flex;
+  position: relative;
+  text-decoration: none !important;
+  @media #{$smarmini}{
+    height: 8vh;
+    width: 40%;
+    border-radius: 7px; 
+    margin-right: 0%;
+    left: 1%;
+  }
+  @media #{$smarphone}{
+    height: 14vh;
+    width: 50%;
+    margin-right: 0%;
+    border-radius: 10px; 
+    left: 1%;
+  }
+  @media #{$tablet}{
+    height: 16vh;
+    width: 50%;
+    margin-right: 0%;
+    border-radius: 15px; 
+    left: 1%;
+  } 
+}
+.carousel_B {
+  background-color: rgba(255, 255, 255, 0.336);
+  width: 38%;
+  left: 1%;
+  margin-left: 10%;
+  height: 18vh;
+  border-radius: 15px; 
+  display: flex;
+  position: relative;
+  text-decoration: none !important;
+  @media #{$smarmini}{
+    height: 8vh;
+    margin-left: 0%;
+    width: 40%;
+    right: 1%;
+    border-radius: 7px; 
+  }
+  @media #{$smarphone}{
+    height: 14vh;
+    width: 50%;
+    margin-left: 0%;
+    right: 1%;
+    border-radius: 10px; 
+  }
+  @media #{$tablet}{
+    height: 16vh;
+    width: 50%;
+    margin-left: 0%;
+    right: 1%;
+    border-radius: 15px; 
+  }
+}
+
+.imagenPresentacion_A {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 25%;
+
+  @media #{$smarphone}{
+    width:80%;
+    height: 85%;
+    top:15%;
+    right: 30%;
+  }
+
+}
+.imagenPresentacion_B{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 30%;
+  @media #{$smarmini}{
+    width:80%;
+    height: 90%;
+    top:15%;
+    right: 35%;
+  }
+  @media #{$smarphone}{
+    width:80%;
+    height: 85%;
+    top:15%;
+    right: 35%;
   }
   
-  .books {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    position: relative;
+}
+
+.titulos_carousel {
+  position: absolute;
+  font-size: 2vh;
+  width: 50%;
+  right: 4%;
+  line-height: 180%;
+  top: 20%;
+  text-decoration: none !important;
+  color: black;
+  @media #{$smarmini}{
+    font-size: 0.25rem;
+    height: 10%;
   }
-  
-  .botonNext {
-    margin-top: 20rem;
-    width: 2rem;
-    height: 2.5rem;
-    top: 3rem;
-    right: 10px;
-    position: absolute;
-    cursor: pointer;
+  @media #{$smarphone}{
+    font-size: 1.1ex;
+    height: 10%;
   }
-  .botonPrev {
-    margin-top: 20rem;
-    width: 2rem;
-    height: 2.5rem;
-    margin-right: 2rem;
-    top: 3rem;
-    right: 25px;
-    position: absolute;
-    cursor: pointer;
+  @media #{$tablet}{
+    font-size:1.8ex;
+    height: 10%;
+    line-height: 150%;
   }
-  .paginado {
-    float: right;
-    margin-right: 1rem;
+  &_p{
+    @media #{$smarphone}{
+      font-size: 1.4ex;
+    }
+    @media #{$tablet}{
+      font-size:1.6ex;
+      height: 10%;
+    }
   }
-  
-  .box_generos {
-    display: flex;
-    overflow-x: scroll;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+}
+.e-books-h1{
+  width: 20%;
+  margin-top: 2%;
+  &_i{
+    font-size: 2rem;
+    @media #{$smarmini}{
+      font-size: 0.7rem;
+    }  
+    @media #{$smarphone}{
+      font-size: 1.5ex;
+      margin-left: 5%;
+    }  
+    @media #{$tablet}{
+      font-size:1.3ex;
+      height: 8%;
+    }
   }
-  
-  .box_generos::-webkit-scrollbar-thumb {
-   visibility: hidden;
+
+}
+.container_home{
+  width: 100%;
+  height: 15%;
+  @include caja-flex(flex,column,center,center,nowrap);
+  margin-top: 2%;
+  margin-bottom: 2%;
+  &_pag{
+    @include caja-flex(flex,row,space-between,center,nowrap);
+    width: 100%;
+    height: 15%;
+    @media #{$smarmini}{
+      width: 80%;
+    } 
+    @media #{$smarphone}{
+      height: 15%;
+      margin-top: 5%;
+    }
+    @media #{$tablet}{
+      height: 20%;
+      margin-top: 10%;
+    } 
   }
-  .generos {
+}
+.paginado {
+  @include caja-flex(flex,row,space-between,center,nowrap);
+  width: 20%;
+  height: 100%;
+}
+
+.botonPrevNext {
+  width: 10%;
+  height: 30%;
+  cursor: pointer;
+  border: none;
+  &_b{
+    color: rgb(37, 37, 37);
+    @media #{$smarphone}{
+      width: 100%;
+      height: 100%;
+    } 
+  }
+  @media #{$smarmini}{
+    width: 30%;
+    height: 2vh;
+    border-radius:3px;
+  }  
+  @media #{$smarphone}{
+    width: 30%;
+    height: 3vh;
+    margin-right: 10%;
+    border-radius:4px;
+    font-size: 1.8ex;
+  } 
+  @media #{$tablet}{
+    width: 30%;
+    height: 4vh;
+    margin-right: 10%;
+    border-radius:5px;
+    font-size: 2.3ex;
+  } 
+
+}
+
+.botones_generos{
+ display: grid;
+ grid-template-columns: 85% 5%;
+ column-gap: 3%;
+  width: 90%;
+}
+
+.box_generos {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  margin: auto;
+}
+
+.box_generos::-webkit-scrollbar-thumb {
+  visibility: hidden;
+}
+
+.generos {
   padding: 1rem;
   border: none;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1%;
   border-radius: 10px;
-  margin-left: 1rem;
+  margin-left: 4%;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 5%;
   font-size: 1rem;
-  }
-  .generos:focus {
-    background-color: rgb(250, 220, 164);
-    color: white;
-  }
-  
-  .e_books h1{
-  left: 3rem;
-  position: absolute;
-  margin-top: 1rem;
-  }
-  
-  .carouselMajor{
-    padding: 30px;
-    background-color: rgb(250, 220, 164);
-  }
-  .carousel {
-    background-color: rgba(255, 255, 255, 0.336);
-    width: 30rem;
-    height: 12rem;
-    border-radius: 15px; 
-    display: flex;
-    position: relative;
-    margin: auto;
-    text-decoration: none !important;
-  }
-  .titulos_carousel {
-    position: absolute;
-    font-size: 1rem;
-    right: 4rem;
-    top: 2.5rem;
-    text-decoration: none !important;
-    color: black;
-  }
-  
-  .titulos_carousel h2{
-    text-decoration: none !important;
-    color: black;
-  }
-  
-  .link_carousel {
-    text-decoration: none !important;
-    color: black;
-  }
-  
-  .imagenPresentacion {
-    width: 25rem;
-    height: 12rem;
-    position: absolute;
-    left: -7rem;
-  }
-  .botones_generos {
-    display: flex;
-  }
-  .cleanButton {
-    position: absolute;
-    right: 8rem;
-    top: 24rem;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
+  @media #{$smarmini}{
+    font-size: 0.3rem;
+    padding: 2%;
+    border-radius: 3px;
+    margin-bottom: 5%;
+  }  
+  @media #{$smarphone}{
+    font-size: 1.4ex;
+    font-weight: 500;
+    padding: 2%;
     border-radius: 7px;
-    font-weight: bold;
-    background-color: sandybrown;
+    margin-bottom: 5%;
+  } 
+  @media #{$tablet}{
+    font-size: 1.8ex;
+    font-weight: 600;
+    padding: 2%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+  } 
+}
+.generos:focus {
+  background-color: rgb(250, 220, 164);
+  color: white;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #f8f7f7;
+  width: 100%;
+  margin-top: 5%;
+  @media #{$smarmini}{
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0%;
   }
-  .cleanButton:hover {
-    background-color: rgb(221, 98, 98);
-    color: white;
+  @media #{$smarphone}{
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0%;
+  } 
+  @media #{$tablet}{
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+  } 
+}
+.cleanButton {
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  height: 50%;
+  width: 10vw;
+  background-color: sandybrown;
+  margin-top: 80%;
+  font-size:1rem ;
+  @media #{$smarmini}{
+    margin-top: 70%;
+    width: 12vw;
+    font-size: 0.3ex;
+    height: 50%;
+  }  
+  @media #{$smarphone}{
+    margin-top: 80%;
+    font-weight: 500;
+    font-size: 1.4ex;
+    height: 50%;
+    width: 13vw;
   }
+  @media #{$tablet}{
+    margin-top: 80%;
+    font-weight: 500;
+    height: 50%;
+    font-size: 1.8ex;
+    width: 12vw;
+  } 
+}
+.cleanButton:hover {
+  background-color: rgb(221, 98, 98);
+  color: white;
+}
+
+
   .btn_page {
-    margin-bottom: 1rem;
+    margin-bottom: 10vh;
+    height: 10%;
+    background-color: #f8f7f7;
   }
   .btn_number {
-    font-size: 1rem;
-    width: 2rem;
+    font-size: 2vh;
+    width: 4vw;
+    height: 2.5vh;
     padding: 0.5rem;
     margin-left: 1rem;
     cursor: pointer;
@@ -148,6 +407,21 @@
     border: none;
     background-color: rgb(233, 233, 233);
     font-weight: bold;
+    @media #{$smarmini}{
+      height: 2vh;
+      width: 8vw;
+      font-size: 0.3ex;
+    }
+    @media #{$smarphone}{
+      height: 2vh;
+      width: 8vw;
+      font-size: 0.8ex;
+    }
+    @media #{$tablet}{
+      height: 2vh;
+      width: 8vw;
+      font-size: 1.3ex;
+    } 
   }
   .btn_number:focus {
     background-color: rgb(250, 220, 164);
@@ -168,16 +442,19 @@
     background-color: rgb(250, 220, 164);
     color: white;
     font-weight: bold;
+    @media #{$smarmini}{
+      height: 2vh;
+      width: 8vw;
+      font-size: 0.3ex;
+    }
+    @media #{$smarphone}{
+      height: 2vh;
+      width: 8vw;
+      font-size: 0.8ex;
+    }    
+    @media #{$tablet}{
+      height: 2vh;
+      width: 8vw;
+      font-size: 1.3ex;
+    } 
   }
-  
-  .img_carga {
-    margin-left: 30rem;
-  }
-  .noEncontrado {
-    margin-left: 27rem;
-    color: black;
-    width: 30rem;
-    color: rgb(97, 95, 95);
-  }
-  
-  

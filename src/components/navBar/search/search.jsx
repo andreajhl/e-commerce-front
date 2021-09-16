@@ -20,7 +20,7 @@ export default function Search () {
     return (
         <div className="searchBar">
             <BiSearchAlt className="search-btn"/>
-            <input className="search-input" type="text" placeholder="Buscar por título o autor..."
+            <input className="search-input" type="text" placeholder="título o autor..."
             autoComplete="on"
             value={busqueda}
             onChange={handleChange}/>

@@ -16,8 +16,10 @@ export default function OpcionesUser (){
         <div className='opcionesUser'>
             <h1 className="welcome" >¡Bienvenido {state.nombre}!</h1>
             <img src={state.foto} alt="profilePhoto" className="profilePhoto" />
-            <Link to={`/profile/${token.uid}`} style={{textDecoration:'none'}} ><h2 className="perfilGo">Ver perfil</h2></Link>
-            <Link to='/ordenes' style={{textDecoration:'none'}} ><h2 className="perfilGo">Historial de Compras</h2></Link>
+            <div className='container_opcionesUser'>
+                <Link to={`/profile/${token.uid}`} style={{textDecoration:'none'}} ><h2 className="perfilGo">Ver perfil</h2></Link>
+                <Link to='/ordenes' style={{textDecoration:'none'}} ><h2 className="perfilGo">Historial de Compras</h2></Link>   
+            </div>
         </div>
     )
 }

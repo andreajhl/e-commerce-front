@@ -6,7 +6,7 @@ import {useHistory} from 'react-router-dom';
 
 import {addCart, seeCart} from '../../actions/cart';
 import { getDetails} from '../../actions/book' 
-import ReviewForm from './review/reviewForm/reviewForm'
+// import ReviewForm from './review/reviewForm/reviewForm'
 import {payloadJWT} from "../../funciones/localStoreFunction";
 import { deleteBook } from '../../funciones/delete';
 
@@ -25,7 +25,7 @@ export default function Details() {
 
     var token=window.localStorage.getItem('token')
 
-    const { titulo, autor, editorial, descripcion, fecha, paginas, generos, img, idioma, stock, precio, _id, review } = details;
+    const { titulo, autor, editorial, descripcion, fecha, paginas, generos, img, idioma, stock, precio, _id } = details;
         
     var a=payloadJWT()
 
@@ -54,17 +54,17 @@ export default function Details() {
         }
     }
 
-    if(review) {
+    // if(review) {
             
-        var estrellas = (estrellita) => {
-            let estrellas = [];
-            for (let i = 0; i < estrellita; i++) {
-                estrellas.push(<p className="estrellas">★</p>)
+    //     var estrellas = (estrellita) => {
+    //         let estrellas = [];
+    //         for (let i = 0; i < estrellita; i++) {
+    //             estrellas.push(<p className="estrellas">★</p>)
                 
-            }
-            return estrellas
-        }  
-    }
+    //         }
+    //         return estrellas
+    //     }  
+    // }
 
     async function removeBook(id,token){
         var mando= await swal ( " ¿Seguro que quieres eliminarlo? " , { 
@@ -99,23 +99,24 @@ export default function Details() {
         return (
             <div className='details'>
                 <div className="detalles_izq">
-                    <img className="imagen_detail" src={img} alt={`imagen de portada del libro: ${titulo}`} />
-                    <h3 className="autor_detail">{autor}</h3>
+                    <div className="imagen_detail">
+                             <img className="imagen_detail_i" src={img} alt={`imagen de portada del libro: ${titulo}`} />
+                        </div>
                     <div className="detail_info">
-                        <div>
-                            <p className="generos_detail">Generos:</p>
+                        <div className="detail_info_div">
+                            <p className="detail_p">Generos:</p>
                             <p className="detail_texto">{generos.join(", ")}</p>
                         </div>
-                        <div>
-                            <p>Idioma: </p>
+                        <div className="detail_info_div">
+                            <p className="detail_p"> Idioma: </p>
                             <p className="detail_texto"> {idioma}</p>
                         </div>
-                        <div>
-                            <p >Paginas: </p>
+                        <div className="detail_info_div">
+                            <p className="detail_p">Paginas: </p>
                             <p className="detail_texto">{paginas}</p>
                         </div>
-                        <div>
-                            <p>Publicación:</p>
+                        <div >
+                            <p className="detail_p">Publicación:</p>
                             <p className="detail_texto">{new Date(fecha).toDateString()}</p>
                         </div> 
                       { a && a.admin? <button className="boton_editar"><NavLink className="btn_editar" style={{textDecoration:'none'}} to={`/edit/${_id}`} >Edit</NavLink></button>:null}
@@ -123,11 +124,11 @@ export default function Details() {
                     </div>
                 </div>
                 <div className="contenido_details">
-                    <div className="comprar">
-                        {a && a.admin ? false : <button className={stock<= 0? "vacio_detail": "comprar_detail"} onClick={comprarBoton}>Comprar</button>}
-                    </div>
+                    {a && a.admin ? false : <button className={stock<= 0? "vacio_detail": "comprar_detail"} onClick={comprarBoton}>Comprar</button>}
                     {a && a.admin && <button className="btn_Eliminar"onClick={()=> removeBook(id,token)}>Eliminar</button> }
-                    <h2 className="titulo_detail">{titulo}</h2>
+                    <div className="titulo_detail">
+                      <h2 className="titulo_detail_i">{titulo}</h2>
+                    </div>
                     <div className="autor_editorial">
                         <h3 className="autor_detail_der">{autor}</h3>
                         <p className="guion_der">-</p>
@@ -141,24 +142,24 @@ export default function Details() {
                         <p className={stock<= 0? "stock_vacio": "stock_unidad"}>{stock<=0? "No hay unidades disponibles":`Quedan ${stock} unidades`}</p>
                     </div>
                     <div className='descripcion'>
-                        <p className="descripcion_titulo">Reseña del Libro</p>
+                        <p className="descripcion_titulo">Reseña</p>
                         <p className="descripcion_contenido">{descripcion}</p>
-                      
                     </div>
-                    <div className="opiniones">
-                    <h2 className="titulo_valoracion">Opiniones de nuestros lectores</h2>
-                    {review &&  <div> 
-                        {review.map((r,i)=>(
-                            <div key={i} className="valoraciones">
-                                <h4>{r.nombre + " " + r.apellido}</h4>
-                                <p>{estrellas(r.valoracion)}</p>
-                                <p className="comentario_usuario">" {r.comentario} "</p>
-                            </div>
-                        ))}
-                        </div>
+                    {/* <div className="opiniones">
+                         <h2 className="titulo_valoracion">Review</h2>
+                        {review >0 ? <div>   
+                           
+                            {review.map((r,i)=>(
+                                <div key={i} className="valoraciones">
+                                    <h4>{r.nombre + " " + r.apellido}</h4>
+                                    <p>{estrellas(r.valoracion)}</p>
+                                    <p className="comentario_usuario">" {r.comentario} "</p>
+                                </div>
+                            ))}
+                        </div> : <p className='sinReview'>Se el primero en comentar</p>
                         }
                     </div>
-                    {a && !a.admin && <div><ReviewForm /></div>}
+                    {a && !a.admin && <div><ReviewForm /></div>} */}
                 </div>
             </div>
         )

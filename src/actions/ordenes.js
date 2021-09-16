@@ -4,9 +4,9 @@ export const ORDEN_DETAIL = 'ORDEN_DETAIL';
 
 const APP = 'https://libreriaecommerce.herokuapp.com'
 
-export function getOrdenes(token){
+export function getOrdenesAdmin(token){
     return async function(dispatch) {
-      let ordenes= await fetch(`${APP}/orden`,{
+      let ordenes= await fetch(`${APP}/orden/admin`,{
         method:'GET',
         headers:{
           'x-token':token,
@@ -30,7 +30,7 @@ export function getOrdenesID(idOrden){
   
 export function getOrdenesUser(token){
     return async function (dispatch) {
-      let ordenesUser= await fetch (`${APP}/auth/historyShopping`, {
+      let ordenesUser= await fetch (`${APP}/orden`, {
           method: 'GET',
           headers:{
             'x-token': token,

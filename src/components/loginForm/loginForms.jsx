@@ -9,7 +9,8 @@ import RecoverPopUp from '../recoverPass/recoverPopUp.jsx';
 import { getProfile } from '../../actions/user';
 import userLogin from '../../funciones/login';
 
-import  './loginForms.css';
+import  '../../styles/loginForm/loginForm.scss';
+import {FcGoogle} from 'react-icons/fc';
 import swal from 'sweetalert';
 
 export default function LoginForms  ({loginBarFunction}){
@@ -50,7 +51,7 @@ export default function LoginForms  ({loginBarFunction}){
             });
             let user=payloadJWT();
             loginBarFunction();
-            closeModal();
+            // closeModal();
             dispatch(getProfile(user.uid)) ;              
             
        }else{
@@ -68,17 +69,6 @@ export default function LoginForms  ({loginBarFunction}){
         });
     };
 
-
-    const closeModal = () => {
-        let logModal = document.getElementById('logModal')
-        let ninjaButton = document.getElementById('buttonsForms')
-        logModal.style.opacity = '0';
-        logModal.style.zIndex = '1'; 
-        ninjaButton.style.opacity = '1';
-        ninjaButton.style.zIndex = '2'
-    };
-
-    // loggin google
     const respuestaGoogle = async (respuesta)=>{
 
         if(respuesta.profileObj){
@@ -103,8 +93,7 @@ export default function LoginForms  ({loginBarFunction}){
                         }
                       }
                 });               
-                loginBarFunction();
-                closeModal();     
+                loginBarFunction();    
             }else {
                 swal({
                     title: "Correo o contraseña incorrectos. Inténtelo de nuevo.",
@@ -119,21 +108,29 @@ export default function LoginForms  ({loginBarFunction}){
             <div className="modal_dialog">
                 <h1 className="title">Iniciar Sesión</h1>
                 <form onSubmit={handleSumbit} className="formLogin">
-                    <h1 className="loginUser">Correo Electrónico</h1>
-                    <input  placeholder="Correo Electronico" className="inputMail1" type='email' autoComplete='off' required name="email" value={data.email} onChange={handleChange} />
-                    <h1 className="loginPass">Contraseña</h1>
-                    <input placeholder="password" name="password" className="inputPass"  type="password" required autoComplete='off' value={data.password} onChange={handleChange} />
-                    {data.email && data.password && <input id="buttonInput"  type="submit" className="logginBtn" value ="Logueate" />}
+                    <h2 className="loginUser">Correo Electrónico</h2>
+                    <input  placeholder="Correo Electronico" className="inputMail1Pass" type='email' autoComplete='off' required name="email" value={data.email} onChange={handleChange} />
+                    <h2 className="loginUser">Contraseña</h2>
+                    <input placeholder="password" name="password" className="inputMail1Pass"  type="password" required autoComplete='off' value={data.password} onChange={handleChange} />
+                    {data.email && data.password && <button id="buttonInput"  type="submit" className="logginBtn">Enter</button>}
                 </form>
                 <GoogleLogin
-                    clientId="1306055516-vqakgi1c0sql95der98ul0vpsufbppd9.apps.googleusercontent.com"
-                    buttonText="Logueate con google"
+                    className='google'
+                    clientId="1476036823951-nellvjps6f9hjntumtugm4oi5ecrm3ve.apps.googleusercontent.com"
+                    render={renderProps => (
+                        <div className='google'>
+                            <FcGoogle className='google_i'/>
+                            <button  className='google_b' onClick={renderProps.onClick} disabled={renderProps.disabled}>Login</button>
+                        </div>
+                       
+                      )}
                     onSuccess={respuestaGoogle}
                     onFailure={respuestaGoogle}
                     cookiePolicy={'single_host_origin'}
                 />
-                <RecoverPopUp/>
-                <button className="close" onClick={closeModal}>Atrás</button>
+                <div className='recover'>
+                  <RecoverPopUp/>
+                </div>
             </div>
         </div>
     );

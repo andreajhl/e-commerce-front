@@ -1,146 +1,338 @@
+@import '../global.scss';
 .detalle_compra{
     background-color: #f8f7f7;
     height: 100vh;
 }
 .detalle_compra_titulo {
     font-size: 2.4rem;
-    padding-top: 0.2rem;
+    padding-top: 5%;
     padding-bottom: 2rem;
     color: #413e3e;
+    @media #{$smarmini}{
+        font-size: 1.3ex;
+        padding-bottom: 5%;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        padding-bottom: 5%;
+    } 
+    @media #{$tablet}{
+        font-size: 2ex;
+        padding-bottom: 3%;
+    }
 }
 .detailCompra {
     border: 1px solid black;
     width: 33rem;
-    height: 68vh;
+    max-height: 80vh;
     margin: auto;
-    padding-top: 2rem;
+    padding-top: 5%;
     background-color: #d4cfcf50;
     border-radius: 10px;
-    padding-bottom: 2rem;
+    padding-bottom: 5%;
     overflow-y:auto;
+    @media #{$smarmini}{
+        width: 80%;
+    }
+    @media #{$smarphone}{
+        width: 80%;
+    } 
 }
 .datosUser {
    color: seagreen;
    font-weight: bold; 
    font-size: 1.2rem;
-   margin-bottom: 0.5rem;
-   margin-top: 0.5rem;
+   margin-bottom: 2%;
+   margin-top: 6%;
+   @media #{$smarmini}{
+    font-size: 1.4ex;
+   }
+   @media #{$smarphone}{
+    font-size: 1.7ex;
+   } 
+
 }
 .mailUser {
     font-weight: 500;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.7ex;
+       } 
 }
 .datos_comprador {
     color: #413e3e;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.9ex;
+    } 
 }
 .datos_compra {
     color: #413e3e; 
     margin-top: 1rem;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+        margin-top: 6%;
+    }
+    @media #{$smarphone}{
+        font-size: 1.9ex;
+        margin-top: 5%;
+    }
+ 
 }
 .numero_compra {
     color: #413e3e; 
     text-decoration: underline;
     margin-top: 1rem;
     font-style: oblique;
-    text-align: left;
-    margin-left: 3.1rem;  
+    text-align: center;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        padding-right: 3%;
+    } 
 }
 .fecha_compra {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    text-align: left;
-    margin-left: 3.1rem;
+    text-align: center;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    } 
 }
 .productos_compra {
     font-size: 1.5rem;
     color: #413e3e;
     font-weight: bold;
     margin-bottom: 1rem;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.9ex;
+    } 
 }
 .titulo_detalle_compra {
     color: #413e3e;
     margin-left: 2rem;
     width: 17rem;
-    margin-bottom: 2rem;
     font-weight: 500;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+        margin-left: 5%;
+        width: auto;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        margin-left: 5%;
+        width: auto;
+    } 
 }
 .titulo_detalle_compra:hover {
     color: sandybrown;
     
 }
+.precio_datos_compra_detalle{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
 .precio_datos_compra {
     color: #413e3e;
     font-weight: bold;
-    display: flex;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    } 
 }
 .peso_dato_compra {
     margin-left: 1.1rem;
     color: sandybrown;
     font-weight: bold;
     margin-right: 0.3rem;
-    
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+        margin-left: 5%;
+        width: auto;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        margin-left: 5%;
+        width: auto;
+    } 
 }
 .datos_libro_detalle {
-    display: flex;
-    width: 20rem;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 100%;
+    margin-bottom: 5%;
 }
 .cantidad_detalle_compra {
-    margin-left: 2rem;
+    margin-left: 30%;
     font-weight: 600;
     background-color: #bbb7b7;
     padding: 0.5rem;
-    height: 1.5rem;
+    height: auto;
     border-radius: 2rem;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+        height: 2.4ex;
+        width: 2.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        height: 2.6ex;
+        width: 2.6ex;
+    } 
 }
 .total_compra_detalle {
     color: #413e3e;
     font-size: 1.4rem;
     font-weight: bold;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    margin-top: 2rem;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+        width: auto;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        width: auto;
+    } 
+    @media #{$tablet}{
+        width: auto;
+    } 
 }
 .peso_total_compra {
     color: sandybrown;
     font-weight: bold;
     margin-right: 0.3rem; 
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+        width: auto;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        width: auto;
+    } 
+    @media #{$tablet}{
+        width: auto;
+    } 
     
 }
 .valor_total_compra {
     color: #413e3e;
     font-weight: bold;
-  
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+        width: auto;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        width: auto;
+    } 
+    @media #{$tablet}{
+        width: auto;
+        margin-left: 3%;
+    } 
 }
 .precio_total_compra_detalle {
    margin-left: 19rem;
    font-size: 1.5rem;
    margin-bottom: 2rem;
     margin-top: 2rem;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+        width: auto;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        width: auto;
+    } 
+    @media #{$tablet}{
+        width: auto;
+    } 
 }
 .total_compra_titulo {
-    display: flex;
+    @include caja-flex(flex,row,space-evenly,center,nowrap);
+    width: 100%;
+    margin-bottom: 5%;
+    @media #{$tablet}{
+        justify-content: center;
+    } 
 }
 
 .direccion_envio_detalle h2 {
     color: #413e3e;
     margin-bottom: 1.5rem;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+        margin-bottom:5%;
+    }
+    @media #{$smarphone}{
+        font-size: 1.9ex;
+        margin-bottom:5%;
+    } 
 }
 .direccion_envio_detalle p {
     color: #413e3e;
     font-weight: 500;
+    text-align: center;
     margin-bottom: 1rem;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+        margin-bottom:5%;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        margin-bottom:5%;
+        width: 90%;
+        margin-left: 3%;
+    } 
 }
 .estado_pedido_orden {
     text-align: left;
     margin-left: 1.3rem;
-    margin-top: 2rem;
+    @media #{$smarmini}{
+        text-align: center;
+        margin-left: 0rem;
+    }
+    @media #{$smarphone}{
+        text-align: center;
+        margin-left: 0rem;
+    } 
+    @media #{$tablet}{
+        text-align: center;
+        margin-left: 0rem;
+    } 
+
 }
 .estado_pedido {
     font-weight: 500;
     color: #413e3e;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    } 
 }
 .estado_pedido span {
-    margin-left: 14rem;
     color: #413e3e;
     font-weight: bold;
     font-size: 1.2rem;
+    @media #{$smarmini}{
+        font-size: 1.6ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.9ex;
+    } 
 }

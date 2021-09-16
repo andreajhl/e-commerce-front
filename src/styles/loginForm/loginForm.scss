@@ -1,0 +1,219 @@
+@import '../global.scss';
+.title{
+    font-size: 3vh;
+    color: #413e3e;
+    margin-bottom: 4vh;
+    margin-top: 80%;
+    @media #{$smarmini}{
+        font-size: 1.7ex;
+        margin-top: 5%;
+        margin-bottom: 15%;
+    }
+    @media #{$smarphone}{
+        font-size: 2ex;
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
+    @media #{$tablet}{
+        margin-top: 100%;
+        font-size: 2.3ex;
+        margin-bottom: 15%;
+     }
+}
+
+.logModal{
+    @include caja-flex(flex,column,center,center,nowrap);
+    height: 75%;
+    z-index: 1;
+    position: inherit;
+    opacity: 1;
+    @media #{$smarmini}{
+        width: 100%;
+        height: 75%;
+        margin-bottom: 15%;
+    }
+    @media #{$smarphone}{
+        width: 100%;
+        height: 75%;
+        margin-bottom: 15%;
+    }
+    @media #{$tablet}{
+        width: 100%;
+        height: 75%;
+        margin-bottom: 15%;
+    }
+}
+
+.modal_dialog{
+    align-items:center ;
+    width: 90%;
+    height: 100%;
+    @include caja-flex(flex,column,space-around,center,nowrap);
+}
+.formLogin{
+    width: 100%;
+    height: 80%;
+}
+.loginUser{
+    color: #2b2929;
+    font-size: 2vh;
+    @media #{$smarmini}{
+       font-size: 1.2ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.5ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.7ex;
+    }
+}    
+.close:hover{
+background-color: rgb(244, 164, 96, 1); 
+color: white;
+cursor: pointer;
+}
+.logginBtn{
+    border: none;
+    width: 30%;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: rgb(244, 164, 96,0.5);
+    color: #1c1b1b;
+    font-weight: bold;
+    font-size: 2vh;
+    @media #{$smarmini}{
+        width:40%;
+        font-size: 1.3ex;
+        padding:2%
+    }
+    @media #{$smarphone}{
+        width:40%;
+        font-size: 1.5ex;
+        padding:2%
+    }
+    @media #{$tablet}{
+        width:40%;
+        font-size: 1.7ex;
+        padding:2%
+    }
+}
+
+.logginBtn:hover{
+    background-color: rgb(244, 164, 96,1);
+    cursor: pointer;
+    color:white;
+}
+
+// .olvidaste{
+//     color: grey;
+//     font-size: 12px;
+//     margin-bottom: -1vh;
+//     margin-top: 5vh;
+
+// }
+
+.inputMail1Pass{
+    padding: 2%;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.604);
+    border:none;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    font-size: 1.8vh;
+    @media #{$smarmini}{
+        width: 90%;
+        font-size: 1ex;
+        margin-bottom: 15%;
+    }
+    @media #{$smarphone}{
+        width: 90%;
+        font-size: 1.3ex;
+        margin-bottom: 10%;
+    }
+    @media #{$tablet}{
+        width: 90%;
+        margin-bottom: 15%;
+        font-size: 1.6ex;
+    }
+}
+.google{
+    @include caja-flex(flex,row,space-around,center,nowrap);
+    width:40%;
+    height: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgba(255, 255, 255, 0.604);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border:none;
+    border-radius: 15px;
+    &_b{
+        border:none;
+        background: none;     
+        width: auto; 
+        color: #1c1b1b;
+        font-weight: bold;
+        font-size: 2vh;
+        @media #{$smarmini}{
+           font-size: 1.15ex;
+           margin-top: 10%;
+           margin-bottom: 10%;
+        }
+        @media #{$smarphone}{
+            margin-top: 10%;
+            margin-bottom: 1%;
+            font-size: 1.2ex;
+        }
+        @media #{$tablet}{
+            margin-top: 10%;
+            margin-bottom: 10%;
+            font-size: 1.3ex;
+        }
+    }
+    &_i{
+        width: 30%;
+        font-size: 4vh;
+    }
+    @media #{$smarmini}{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        border-radius: 5px;
+        margin-bottom: 10%;
+    }
+    @media #{$smarphone}{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        border-radius: 5px;
+        margin-bottom: 15%;
+    }
+    @media #{$tablet}{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        border-radius: 5px;
+    }
+}
+.recover{
+    width: 100%;
+    height: 10%;
+    @include caja-flex(flex,column,center,center,nowrap)
+}
+// .modal{
+//     background-color: rgb(250, 220, 164);
+//     display: grid;
+//     opacity: 0; 
+//     width: 5em; 
+//     height: auto;
+//     margin: 0;
+//     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s ;
+//     line-height: 0.5em;
+//     z-index: 1;
+//     position: absolute;
+// }
+
+// .modal-open{
+//     display:grid;
+    
+// }
+// .modal_dialog{
+//     align-items:center ;
+// }

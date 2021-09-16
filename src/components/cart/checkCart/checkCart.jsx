@@ -43,13 +43,17 @@ export default function CheckCart(){
         dispatch(getPromos())
     },[dispatch])
     
-    for (const i in carts) {
+   if(carts && promo){
+       console.log(carts)
+        for (const i in carts) {
         arrayCart.push(carts[i])
         compras.push({producto:carts[i].id,cantidad:carts[i].count})
         precioTotal+=carts[i].precio*carts[i].count
+        }
+         var librosPromoPrecio = promoDescPrecioFinal(carts,promo,precioTotal)
     }
 
-    var librosPromoPrecio = promoDescPrecioFinal(carts,promo,precioTotal)
+   
 
     function handleChange(e){
         setState({
@@ -86,7 +90,7 @@ export default function CheckCart(){
         return( 
             <form className= "form_compra" onSubmit={handleSubmit}>
                 <CardElement className="tarjeta"/>      
-                {state.pais && state.calle && state.codigoPostal && <button className="btn_pasarela_compra">
+                {state.pais && state.calle && <button className="btn_pasarela_compra">
                     Comprar
                 </button>}
             </form>
@@ -94,49 +98,22 @@ export default function CheckCart(){
     }
     return (
         <div className="pasarela">
-            <h1 className="titulo_principal_pasarela">Resumen de la compra</h1>
+            <div className="titulo_principal_pasarela">
+              <h1 className="titulo_principal_pasarela_i">Resumen de la compra</h1>
+            </div>
             <div className="pasarela_div">
-                {token ? (<div className="contenedor_facturacion">
-                    <p className="facturacion_pasarela">Facturación</p>     
-                    <p className="direccion_pasarela">Dirección de envío</p>
-                    <div className="datos_personales_pasarela">
-                        <div>
-                            <label>País</label>  
-                            <input type='text' required autoComplete='country-name' name='pais' value={state.pais} onChange={(e)=>handleChange(e)} />    
-                        </div>
-                        <div>
-                            <label>Ciudad</label> 
-                            <input type='text' required autoComplete='off' name='ciudad' value={state.ciudad} onChange={(e)=>handleChange(e)}/>    
-                        </div>
-                        <div>
-                            <label>Calle</label>  
-                            <input type='text' required autoComplete='street-address' name='calle' value={state.calle} onChange={(e)=>handleChange(e)} />     
-                        </div>
-                        <div>
-                            <label>Código Postal</label>  
-                            <input type='number' required autoComplete='postal-code' name='codigoPostal' value={state.codigoPostal} onChange={(e)=>handleChange(e)}/>    
-                        </div>
-                </div>
-                    <div className='tarjeta_pago'>
-                        <Elements  stripe={stripePromise}>
-                            <Payment />
-                        </Elements>                      
-                    </div>
-                </div>): (<div>
-                    <p>Para continuar con la compra debes Iniciar sesión</p>
-                </div>)} 
-                <div className="contenedor_pasarela">
+                 <div className="contenedor_pasarela">
                     <div className="pasarela_card">
-                        {arrayCart.map(e=>(<div key={e._id} className="pasarela_cdtm">
-                                <div>
-                                <img className="imagen_pasarela"alt="imagen_pasarela"src={e.img}></img>
+                        { arrayCart && arrayCart.map(e=>(<div key={e._id} className="pasarela_cdtm">
+                                <div className="imagen_pasarela">
+                                    <img className="imagen_pasarela_i"alt="imagen_pasarela"src={e.img}></img>
                                 </div>
                                 <div className="pasarela_info">
-                                <p className="titulo_pasarela">{e.titulo}</p>
-                                <p className="autor_pasarela">{e.autor}</p>
-                                <p className="editorial_pasarela">{e.editorial}</p>
-                                <p className="unidades_pasarela">Unidades: {e.count}</p>
-                                <p className="precio_pasarela"><span className="peso_pasarela">$</span> {e.precio * e.count}</p>
+                                    <p className="titulo_pasarela">{e.titulo}</p>
+                                    <p className="autor_pasarela">{e.autor}</p>
+                                    <p className="editorial_pasarela">{e.editorial}</p>
+                                    <p className="unidades_pasarela">Unidades: {e.count}</p>
+                                    <p className="precio_pasarela"><span className="peso_pasarela">$</span> {e.precio * e.count}</p>
                                 </div>
                             </div>)
                         )}
@@ -147,7 +124,32 @@ export default function CheckCart(){
                         {librosPromoPrecio > 1 && <p className='neto_pasarela'>Descuento:   <span className="subtotal_pasarela_descuento">- ${Math.round(precioTotal-librosPromoPrecio)}</span></p>}
                         <p className='total_pasarela'>{librosPromoPrecio>0? 'Total con Descuento': 'Total'}:<span className="total_numero_pasarela">$ {librosPromoPrecio>0? Math.round(librosPromoPrecio + librosPromoPrecio* 0.1):(Math.round(precioTotal+precioTotal* 0.1))}</span></p>
                     </div>
-                </div>               
+                </div> 
+                {token ? (<div className="contenedor_facturacion">    
+                    <p className="direccion_pasarela">Dirección de envío</p>
+                    <div className="datos_personales_pasarela">
+                        <div className="datos_personales_pasarela_div">
+                            <label className="datos_personales_pasarela_l">País</label>  
+                            <input type='text' required autoComplete='country-name' name='pais' value={state.pais} onChange={(e)=>handleChange(e)} className="datos_personales_pasarela_i"/>    
+                        </div>
+                        <div className="datos_personales_pasarela_div">
+                            <label className="datos_personales_pasarela_l">Ciudad</label> 
+                            <input type='text' required autoComplete='off' name='ciudad' value={state.ciudad} onChange={(e)=>handleChange(e)} className="datos_personales_pasarela_i"/>    
+                        </div>
+                        <div className="datos_personales_pasarela_div">
+                            <label className="datos_personales_pasarela_l">Calle</label>  
+                            <input type='text' required autoComplete='street-address' name='calle' value={state.calle} onChange={(e)=>handleChange(e)} className="datos_personales_pasarela_i"/>     
+                        </div>
+                </div>
+                    <div className='tarjeta_pago'>
+                        <Elements  stripe={stripePromise}>
+                            <Payment />
+                        </Elements>                      
+                    </div>
+                </div>  
+                ): (<div>
+                    <p className='pasarela-login'>Para continuar con la compra debes Iniciar sesión</p>
+                </div>)}             
             </div>
 
         </div>

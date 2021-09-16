@@ -38,11 +38,16 @@ export default function Sucursales (){
     return (
     <div className='container_sucursales'>
         <div className='text_sucursales'>
-            <h2 className="sucTitle">Sucursales</h2>
+            <div  className="sucTitle">
+                <h2 className="sucTitle_i">Sucursales</h2>
+            </div>
             <div className="info">
-                <p >Somos una de las librerias mas antiguas de Buenos Aires; actualmente contamos con 8 sucursales fisicas, no dudes en visitarnos, ¡Te esperamos!</p>
-                <button onClick={()=>locationUser()} className='puntero'><FaMapMarkedAlt/></button>
-                <p>Sucursal mas cercana</p> 
+                <div  className="info_div">
+                    <p className="info_i">Somos una de las librerias mas antiguas de Buenos Aires; actualmente contamos con 8 sucursales fisicas, no dudes en visitarnos, ¡Te esperamos!</p>
+                    <button onClick={()=>locationUser()} className='puntero'><FaMapMarkedAlt/></button>
+                    <p className="info_i">Sucursal mas cercana</p>                     
+                </div>
+
             </div>
         </div>
         <div className='map'>

@@ -71,12 +71,14 @@ export default function Perfil() {
     };
 
     return (
-       <div>
+       <div className='div_perfil'>
             <h2 className="perfil_usuario_titulo">Perfil del Usuario</h2>
             <div className="userContenedor">
-                <div>
-                    <img className="fotoMarco" src={state.foto} alt='foto de perfil' />
-                    {!user.admin && <div className='realButton'><span>Cambia tu foto</span><input type="file" required accept="image/*" className='inputFoto' onChange={(e)=>processImage(e)}/></div>}
+                <div className='div_p1'>
+                    <div className="fotoMarco">
+                         <img className="fotoMarco_i" src={state.foto} alt='foto de perfil' />
+                    </div>
+                    {!user.admin && <div className='realButton'><span>Cambia tu foto</span><div className='inputFoto'><label className='inputFoto_l'>cargar foto</label><input type="file" required accept="image/*" className='inputFoto_i' onChange={(e)=>processImage(e)}/></div></div>}
                     {user.admin && admin.length===0 && user.uid !== id &&
                         <Select
                             className="select_user"
@@ -85,16 +87,16 @@ export default function Perfil() {
                             placeholder='Cambiar Rol'
                         />}
                 </div>
-            <div className="table">
-                <div className="childTable">
-                    <p className="nombre_usuario_perfil">{`${state.nombre} ${state.apellido}`}</p>
-                    <p className="email_perfil">E-Mail: <p>{state.email}</p></p>
-                    <p className="rol_perfil">Rol: {state.admin? <p>Administrador</p> : <p>Usuario</p>}</p>
-                    {user.admin &&  user.uid !== id && <button className="eliminar_usuario_perfil" onClick={()=>deleteProfiles()}>Eliminar</button>}
-                    </div>
-                        {(admin.length>0 || foto.length>0) && <button onClick={()=>guardar()}>Guardar</button>}
-                    </div>
+                <div className="table">
+                    <div className="childTable">
+                        <p className="nombre_usuario_perfil">{`${state.nombre} ${state.apellido}`}</p>
+                        <p className="email_perfil">E-Mail: {state.email}</p>
+                        <p className="rol_perfil">Rol: {state.admin? 'Administrador': 'Usuario'}</p>
+                        {user.admin &&  user.uid !== id && <button className="eliminar_usuario_perfil" onClick={()=>deleteProfiles()}>Eliminar</button>}
+                        </div>
+                        {(admin.length>0 || foto.length>0) && <button className='guardar_input' onClick={()=>guardar()}>Guardar</button>}
                 </div>
             </div>
+        </div>
     )
 }

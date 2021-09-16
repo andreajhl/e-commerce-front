@@ -1,125 +1,388 @@
+@import '../global.scss';
 
 .details {
-    display: flex;
+    display: grid;
+    position: fixed;
+    grid-template-columns: 37% 60%;
     background-color: #f8f7f7;
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    padding-top: 2%;
+    @media #{$smarmini}{
+        padding-top: 5%;
+        gap: 3%;
+    }
+    @media #{$smarphone}{
+        padding-top: 5%;
+        gap: 3%;
+    }
+    @media #{$tablet}{
+        padding-top: 2%;
+        gap: 3%;
+    } 
 }
 .detalles_izq {
-    border-radius: 10px;
-    height: 28rem;
-    margin-left: 2rem;
-    background-color: white;
-  
-   
+    width: 80%;
+    height: 100%;
+    @include caja-flex(flex,column,initial,center,nowrap);
+    @media #{$smarmini}{
+        margin-left: 10%;
+    }
+    @media #{$smarphone}{
+        margin-left: 10%;
+    }
+    @media #{$tablet}{
+        margin-left: 10%;
+    } 
 }
+
 .imagen_detail {
-    width: 13rem;
-    height: 18rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    
+    width: 80%;
+    height:50%;
+    @include caja-flex(flex,column,center,center,nowrap);
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #c5c1c1;
+    margin-bottom: 5%;
+    &_i{
+        width: 95%;
+        height: 98%;
+        border-radius: 5px;
+        border: 1px solid #c5c1c1;
+    }
+    @media #{$smarmini}{
+       width: 100%;
+       height: 45%;
+    }
+    @media #{$smarphone}{
+        width: 100%;
+        height: 40%;
+    }
+    @media #{$tablet}{
+        width: 100%;
+        height: 50%;
+    } 
 }
 .titulo_detail {
-    font-size: 2rem;
-    text-align: left;
-    color: #413e3e;
+    @include caja-flex(flex,column,center,center,nowrap);
+    &_i{
+       font-size: 3.5vh;
+        text-align: left;
+        color: #413e3e;
+        @media #{$smarmini}{
+            font-size: 1.5ex;
+            text-align: center;
+        } 
+        @media #{$smarphone}{
+            font-size: 1.9ex;
+            text-align: center;
+        }
+        @media #{$tablet}{
+            font-size: 2.3ex;
+        } 
+    }
+    @media #{$smarmini}{
+        width: 100%;
+        height: auto;
+    } 
+    @media #{$smarphone}{
+        width: 100%;
+        height: auto;
+    }
+    @media #{$tablet}{
+        width: 100%;
+        height: auto;
+    } 
+    
 }
 .autor_detail{
-    font-size: 1.5rem;  
+    font-size: 3vh; 
+    width: 100%; 
+    @media #{$smarmini}{
+        font-size: 1.5ex;
+        margin: 2%;
+    }
+    @media #{$smarphone}{
+        font-size: 1.7ex;
+        margin: 2%;
+    }
+    @media #{$tablet}{
+        font-size: 1.9ex;
+        margin: 2%;
+    } 
 }
 
 .contenido_details {
-    
-    margin-left: 2rem;
-    margin-right: 2rem;
+    width: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+    @media #{$smarmini}{
+        margin-left: 0px;
+    } 
+    @media #{$smarphone}{
+        margin-left: 2%;
+    }
+    @media #{$tablet}{
+        width: 98%;
+        margin-left: 2%;
+    } 
 }
-
+.descripcion{
+    @include caja-flex(flex,column,center,center,nowrap);
+    width: 100%;
+    height: auto;
+}
 .descripcion_titulo {
     text-align: left;
-    font-size: 2rem;
+    font-size: 3vh;
     font-weight: bold;
     color: sandybrown;
-    margin-top: 2rem;
+    margin-top: 2%;
+ 
+    @media #{$smarmini}{
+       font-size: 1.3ex;
+       margin-top: 5%;
+       width: auto;
+    } 
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+        margin-top: 5%;
+        width: auto;
+    }
+    @media #{$tablet}{
+        font-size:1.8ex;
+        margin-top: 5%;
+    } 
+    
 }
 
 .descripcion_contenido {
  text-align: justify;
- overflow-y: scroll; 
- height: 12.5rem;
+ overflow-y: auto; 
+ height: 35vh;
  margin-bottom: 2rem;
- font-weight: 500;
- padding-right: 1rem;
  margin-top: 1rem;
- width: 60rem;
+ font-size: 2.3vh;
+ width: auto;
+ margin-right: 10%;
+ padding-right: 3%;
+ @media #{$smarmini}{
+    font-size: 1.3ex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+ } 
+ @media #{$smarphone}{
+    font-size: 1.4ex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+@media #{$tablet}{
+    font-size: 1.5ex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  
+} 
 }
 .autor_detail_der {
  text-align: left;
- font-size: 1.7rem;
+ width: auto;
+ font-size: 2.5vh;
  color: #666666;
+    @media #{$smarmini}{
+        font-size: 1.3ex;
+
+    } 
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.7ex;
+    } 
 }
 
 .autor_editorial {
     display: flex;
     align-items: center;
+    width: 90%;
+    margin-top: 2%;
+    @media #{$smarmini}{
+        margin-top: 5%;
+     } 
+     @media #{$smarphone}{
+        margin-top: 5%;
+    }
+    @media #{$tablet}{
+        margin-top: 5%;
+      
+    }
+
 }
 .editorial_der {
-    margin-left: 1rem;
-    font-size: 1.3rem;
+    font-size: 2.5vh;
+    width: auto;
     font-weight: bold;
     color: sandybrown;
+    @media #{$smarmini}{
+        font-size: 1.3ex;
+    } 
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.7ex;
+    } 
 }
 .guion_der {
-    font-size: 1.5rem;
-    margin-left: 1rem;
+    font-size: 3.5vh;
+    width: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    @media #{$smarmini}{
+        font-size: 1.3ex;
+    } 
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.9ex;
+    } 
 }
 
 .precio_detalle {
-    display: flex;
-    align-items: center;
+    @include caja-flex(flex,row,left,center,nowrap);
     margin-top: 1rem;
+    
+    @media #{$smarmini}{
+        @include caja-flex(flex,row,center,center,nowrap);
+        margin-top: 5%;
+    } 
+    @media #{$smarphone}{
+        margin-top: 3%;
+        @include caja-flex(flex,row,center,center,nowrap);
+    }
+    @media #{$tablet}{
+        margin-top: 3%;
+        @include caja-flex(flex,row,left,center,nowrap);
+    } 
+
 }
 .precio_peso {
     color: sandybrown;
-    font-size: 1.3rem; 
+    font-size: 2.3vh; 
     font-weight: bold;
+    width: auto;
+    @media #{$smarmini}{
+        font-size: 1.3ex;
+    } 
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.7ex;
+    } 
 }
 .precio_numero {
-    font-size: 1.3rem;
+    font-size: 2.3vh;
     font-weight: bold;
     color: #413e3e;
+    width: auto;
     margin-left: 0.5rem;
+    @media #{$smarmini}{
+        font-size: 1.3ex;
+    } 
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.7ex;
+    } 
 }
 .stock {
-    display: flex;
-    margin-top: 1rem;
+    margin-top: 3%;
+    @media #{$smarmini}{
+        margin-top: 5%;
+    } 
+    @media #{$smarphone}{
+        margin-top: 5%;
+    }
+    @media #{$tablet}{
+        margin-top: 5%;
+    } 
 }
 .stock_unidad {
     color: rgb(10, 165, 10);
     font-weight: bold;
+    text-align:left;
+    font-size: 2vh;
+    @media #{$smarmini}{
+        text-align:center;
+        font-size: 1.3ex;
+    } 
+    @media #{$smarphone}{
+        text-align:center;
+        font-size: 1.5ex;
+    }
+    @media #{$tablet}{
+       font-size: 1.7ex;
+    } 
 }
+
 .stock_vacio {
     font-weight: bold;
+    text-align:left;
     color: red;
+    font-size: 2vh;
+    @media #{$smarmini}{
+        text-align:center;
+        font-size: 1.3ex;
+    } 
+    @media #{$smarphone}{
+        font-size: 1.5ex;
+        text-align:center;
+    }
+    @media #{$tablet}{
+        font-size: 1.7ex;
+     } 
 }
 .detail_info {
- margin-left: 1rem;
- margin-top: 1rem;
-
-}
-.detail_info div {
-    display: flex;
-    color: #666666; 
-    font-weight: 500;  
+    height: 25%;
+    width: 80%;
+    @media #{$smarphone}{
+        height: 20%;
+    }
+    &_div{
+        @include caja-flex(flex,row,space-around,center,nowrap);
+        width: 100%;
+        height: 25%; 
+    }
 }
 
 .detail_texto {
-  
+  font-size: 2.3vh;
    color: sandybrown;
-   font-weight: bold;
-   position: absolute;
-   margin-left: 7rem;
+   @media #{$smarmini}{
+    font-size: 1.2ex;   
+    }
+    @media #{$smarphone}{
+        font-size: 1.4ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.6ex;
+     } 
     
+}
+.detail_p{
+    color: #666;
+    font-size: 2.3vh;
+    @media #{$smarmini}{
+        font-size: 1.2ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.4ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.6ex;
+     } 
 }
 .comprar_detail {
     border: none;
@@ -130,14 +393,34 @@
     color: white;
     font-weight: bold;
     font-size: 15px;
-    
-}
-.comprar {
-    display: block;
     float: right;
+    top:30%;
+    left: 90%;
     margin-right: 5rem;
-    margin-top: 3rem;
+    position: fixed;
+    @media #{$smarmini}{
+        top:90%;
+        left: 5%;
+        margin-right: 0%;
+        font-size: 1.1ex;
+        padding: 1%;
+    }
+    @media #{$smarphone}{
+        top:90%;
+        left: 5%;
+        margin-right: 0%;
+        font-size: 1.5ex;
+        padding: 1%;
+    }
+    @media #{$tablet}{
+        top:100%;
+        left: 5%;
+        margin-right: 0%;
+        font-size: 1.8ex;
+        padding: 1%;
+     } 
 }
+
 .comprar_detail:hover {
     background-color: rgb(255, 168, 6);
     cursor: pointer;
@@ -159,8 +442,19 @@
     padding: 0.7rem;
     border-radius: 5px;
     background-color: rgb(51, 40, 30);
-    
     font-size: 15px;
+    @media #{$smarmini}{
+        margin-right: 0%;
+        margin-top: 10%;
+        font-size: 1.2ex;
+        padding: 1%;
+    }
+    @media #{$smarphone}{
+        margin-right: 0%;
+        margin-top: 10%;
+        font-size: 1.5ex;
+        padding: 1%;
+    }
     
 }
 .boton_editar:hover {
@@ -170,6 +464,7 @@ background-color: #666666;
 .btn_editar {
     color: white;
     font-weight: bold;
+    
 
 }
 .estrellas {
@@ -178,11 +473,22 @@ background-color: #666666;
 }
 
 .opiniones {
-    text-align: left;
+    @include caja-flex(flex,column,center,center,nowrap);
+    text-align: center;
+    width: 100%;
 }
 .titulo_valoracion {
-    color: #413e3e;
-    margin-bottom: 2rem;
+    color: sandybrown;
+    margin-bottom: 1%;
+    @media #{$smarmini}{
+        font-size: 1.4ex;
+    }
+    @media #{$smarphone}{
+        font-size: 1.6ex;
+    }
+    @media #{$tablet}{
+        font-size: 1.9ex;
+     } 
 }
 .valoraciones h4 {
     color: #413e3e;
@@ -206,9 +512,53 @@ background-color: #666666;
     color: white;
     font-weight: bold;
     right: -25rem;
-    position: relative;
+    @media #{$smarmini}{
+        position: absolute;
+        top:95%;
+        right: 0%;
+        left: 5%;
+        margin-right: 0%;
+        margin-top: 0%;
+        font-size: 1.1ex;
+        padding: 1%;
+    }
+    @media #{$smarphone}{
+        position: absolute;
+        top:90%;
+        right: 0%;
+        left: 5%;
+        margin-right: 0%;
+        margin-top: 0%;
+        font-size: 1.4ex;
+        padding: 1%;
+    }
+    @media #{$tablet}{
+        position: absolute;
+        top:90%;
+        right: 0%;
+        left: 5%;
+        margin-right: 0%;
+        margin-top: 0%;
+        font-size: 1.6x;
+        padding: 1%;
+     } 
 }
 .btn_Eliminar:hover {
 cursor: pointer;
 background-color: rgb(199, 7, 7);
+}
+.sinReview{
+    color:#7a7777;
+    background-color: white;
+    padding: 1%;
+    @media #{$smarmini}{
+        font-size: 1.1ex;
+        width:auto;
+        border-radius: 5px;
+    }
+    @media #{$smarphone}{
+        font-size: 1.5ex;
+        width:auto;
+        border-radius: 5px;
+    }
 }

@@ -29,15 +29,13 @@ export default function Producto({ titulo, autor, img, precio, id, stock, promo}
         <div>
           <img className="imagen" src={img} alt={titulo}></img>
         </div>
-        <div>
+     
           <h2 className="titulo">{titulo}</h2>
-        </div>
-        <div>
+        
           <p className="autor">{autor}</p>
-        </div>
-        {stock >= 0? <div>
-          <p className="precio"><span className="peso">$:</span> {precio}</p>
-        </div>:(stock !== 'whishlist' && <div className="vacio">No hay unidades disponibles</div>)} 
+        
+        {stock >= 0? <p className="precio"><span className="peso">$:</span> {precio}</p>
+        :(stock !== 'whishlist' && <p className="vacio">No hay disponibles</p>)} 
       </div> 
       </NavLink>
     </div>
