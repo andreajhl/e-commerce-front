@@ -248,6 +248,21 @@
         min-height: 10vh;
         min-width: 10vh;
       }
+      @media #{$desktop}{
+        min-height: 6vh;
+        margin-top: 0px;
+        min-width: 7vw;  
+      }
+      @media #{$pantallaGrande}{
+        min-height: 8vh;
+        margin-top: 0px;
+        min-width: 9vw;
+      }
+      @media #{$pantallaExtraGrande}{
+        min-height: 6vh;
+        margin-top: 0px;
+        min-width: 6.8vw;
+      }
     }
   }
 
