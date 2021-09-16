@@ -37,8 +37,8 @@ export default function LoginForms  ({loginBarFunction}){
 
        if(a.token) {
            window.localStorage.setItem("token", a.token)
-            await swal({
-                title: "¡Bienvenid@! Sesión iniciada exitosamente",
+           let mando= await swal({
+                title: "¡Bienvenid@!",
                 icon: "success",
                 buttons: {
                     confirm: {
@@ -50,10 +50,15 @@ export default function LoginForms  ({loginBarFunction}){
                 }
             });
             let user=payloadJWT();
-            loginBarFunction();
-            // closeModal();
-            dispatch(getProfile(user.uid)) ;              
-            
+
+            dispatch(getProfile(user.uid));
+            if(!mando || mando){
+                loginBarFunction();
+                setTimeout(() => {
+                    window.location.reload()
+                }, 800);
+
+            }
        }else{
             swal({
                 title: "Correo o contraseña incorrectos. Inténtelo de nuevo.",
@@ -79,21 +84,30 @@ export default function LoginForms  ({loginBarFunction}){
            let a= await dispatch(userLogin(login)) 
            if(a.token && url !== '/')  history.push('/') 
 
-            if(a.token){ 
-              window.localStorage.setItem("token", a.token)
-              await swal({
-                    title: "¡Bienvenid@! Sesión iniciada exitosamente",
-                    icon: "success",
-                    buttons: {
-                        confirm: {
-                          text: "OK",
-                          value: true,
-                          visible: true,
-                          closeModal: true
-                        }
-                      }
-                });               
-                loginBarFunction();    
+           if(a.token) {
+            window.localStorage.setItem("token", a.token)
+            let mando= await swal({
+                 title: "¡Bienvenid@!",
+                 icon: "success",
+                 buttons: {
+                     confirm: {
+                     text: "OK",
+                     value: true,
+                     visible: true,
+                     closeModal: true
+                     },
+                 }
+             });
+             let user=payloadJWT();
+ 
+             dispatch(getProfile(user.uid));
+             if(!mando || mando){
+                 loginBarFunction();
+                 setTimeout(() => {
+                     window.location.reload()
+                 }, 800);
+ 
+             }
             }else {
                 swal({
                     title: "Correo o contraseña incorrectos. Inténtelo de nuevo.",

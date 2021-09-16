@@ -202,18 +202,17 @@
 }
 .e-books-h1{
   width: 20%;
-  margin-top: 2%;
+
   &_i{
-    font-size: 2rem;
+    font-size: 4vh;
     @media #{$smarmini}{
       font-size: 0.7rem;
     }  
     @media #{$smarphone}{
       font-size: 1.5ex;
-      margin-left: 5%;
     }  
     @media #{$tablet}{
-      font-size:1.3ex;
+      font-size:1.8ex;
       height: 8%;
     }
   }
@@ -223,7 +222,7 @@
   width: 100%;
   height: 15%;
   @include caja-flex(flex,column,center,center,nowrap);
-  margin-top: 2%;
+  margin-top: 5%;
   margin-bottom: 2%;
   &_pag{
     @include caja-flex(flex,row,space-between,center,nowrap);
@@ -234,11 +233,11 @@
     } 
     @media #{$smarphone}{
       height: 15%;
-      margin-top: 5%;
+      margin-top: 0%;
     }
     @media #{$tablet}{
       height: 20%;
-      margin-top: 10%;
+      margin-top: 5%;
     } 
   }
 }
@@ -250,7 +249,13 @@
 
 .botonPrevNext {
   width: 10%;
-  height: 30%;
+  height: auto;
+  width: auto;
+  padding-left: 2%;
+  @include caja-flex(flex,column,center,center,nowrap);
+  padding-right: 2%;
+  font-size: 5.5vh;
+  border-radius: 10px;
   cursor: pointer;
   border: none;
   &_b{
@@ -306,7 +311,7 @@
   margin-bottom: 1%;
   border-radius: 10px;
   margin-left: 4%;
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
   margin-top: 5%;
   font-size: 1rem;

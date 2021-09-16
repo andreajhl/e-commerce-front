@@ -1,30 +1,16 @@
 @import '../global.scss';
 
-// .login-btn{
-//   position: absolute;
-//     right: 2rem;
-//     font-size: 3rem;
-//     background-color: transparent;
-//     border: none;
-// }
 
-// .icono_Usuario {
-//     position: absolute;
-//     right: 2rem;
-//     font-size: 3rem;
-    
-// }
-
-// .agregar_libro {
+.agregar_libro {
   
-//   margin-top: 1rem;
-//   color: black;
-//   margin-left: -3rem;
-// }
+  margin-top: 1rem;
+  color: black;
+  margin-left: -3rem;
+}
 
-// .agregar_libro:hover {
-//   color: rgba(0, 128, 0, 0.774);
-// }
+.agregar_libro:hover {
+  color: rgba(0, 128, 0, 0.774);
+}
 
 
 .sucursales_button_home:hover {
@@ -74,18 +60,18 @@
     width: 100%;
     background-color: rgb(233, 233, 233);
     margin-top: 20%;
-    border-radius: 1rem;
+    border-radius: 8px;
     display: flex;
     @media #{$smarmini}{
         display: grid;
         grid-template-columns: 20% 75%;
         margin-top: 30%;
-        border-radius: 5px;
+        border-radius: 3px;
     }
     @media #{$smarphone}{
       display: grid;
       grid-template-columns: 20% 75%;
-      margin-top: 40%;
+      margin-top: 30%;
       margin-left: 4%;
       border-radius: 5px;
     }
@@ -94,7 +80,7 @@
       grid-template-columns: 20% 75%;
       margin-top: 30%;
       margin-left: 10%;
-      border-radius: 10px;
+      border-radius: 8px;
     }
 }
 
@@ -121,17 +107,25 @@
 .search-btn {
   align-self: center;
   width: 20%;
+  width:3vw ;
   color: rgb(56, 55, 55);
-  font-size: 3vh;
   @media #{$smarmini}{
-    font-size: 1ex;
+    width:3vw ;
   }   
   @media #{$smarphone}{
-    font-size: 1.3ex;
+   width: 3.5vw;
   }
   @media #{$tablet}{
-    font-size: 2.4ex;
+    width: 3.5vw;
   }
+}
+.funcionUser{
+  width: 100%;
+  height: 100%;
+}
+.icono_Usuario{
+  width: 100%;
+  height: 100%;
 }
 
 .search-input::placeholder{
@@ -147,7 +141,7 @@
       }
       @media #{$smarphone}{
         column-gap: 10%;
-        margin-top: 40%;
+        margin-top: 30%;
       }
       @media #{$tablet}{
         column-gap: 10%;
@@ -156,33 +150,41 @@
       }
 
   }
+  .sucursales_button_home a{
 
+    @media #{$smarmini}{
+        font-size: 1.2ex;
+    }
+    @media #{$smarphone}{
+      font-size: 1.6ex;
+    }
+    @media #{$tablet}{
+      font-size: 1.8ex;
+    }
+  }
   .sucursales_button_home{
         border: none;
-         max-width: 100%;
+        max-width: 100%;
         height: 90%;
-        border-radius: 10px;
+        border-radius: 8px;
         background-color: sandybrown;
         color: white;
-        font-weight: bold;
+        @include caja-flex(flex,column,center,center,nowrap);
         font-size: 2.3vh;
         text-decoration: none !important;
         @media #{$smarmini}{
-          border-radius: 5px;
-            font-size: 0.8ex;
-            height:2vh;
+          border-radius: 03px;
+            height:2.5vh;
         }
         @media #{$smarphone}{
-          border-radius: 10px;
-          font-size: 1ex;
+          border-radius: 5px;
           font-weight: 500;
-          height:2.5vh;
+          height:3.5vh;
           padding-left:13% ;
           padding-right: 13%;
         }
         @media #{$tablet}{
-          border-radius: 10px;
-          font-size: 1.8ex;
+          border-radius: 5px;
           font-weight: 500;
           height:4.5vh;
         }
@@ -195,42 +197,56 @@
   .img_perfil_nav{
     border-radius: 100%;  
     margin-top: 10%;
-    height: 28%;
-    width: 23%;
+    min-height: 100%;
+    min-width: 100%;
 
     @media #{$smarmini}{
+
       margin-top: 0%;
-      height: 150%;
-      width: 150%;
+
     }
     @media #{$smarphone}{
       margin-top: 0%;
-      height: 100%;
-      width: 100%;
+
     }
     @media #{$tablet}{
       margin-top: 1.3vh;
-      height: 120%;
-      width: 120%;
+
+    }
+    @media #{$desktop}{
+      min-height: 2vh;
+      margin-top: 0px;
+      min-width: 2vw;
+      
+  
+    }
+    @media #{$pantallaGrande}{
+      min-height: 10%;
+      min-width: 10%;
+    }
+    @media #{$pantallaExtraGrande}{
+      margin-right: 10%;
     }
     &_i{
       margin-top: 10%;
       height: 25%;
       width: 25%;
       @media #{$smarmini}{
-        margin-top: 0%;
-        height: 10vh;
-        width: 10vw;
+        margin-top: 10%;
+        min-height: 5.5vh;
+        min-width: 6vh;
       }
       @media #{$smarphone}{
         margin-top: 0%;
-        height: 10vh;
-        width: 10vw;
+        min-height: 6.5vh;
+        min-width: 7vh;
+        margin-left: -30%;
       }
       @media #{$tablet}{
-        margin-top: -10%;
-        height: 100%;
-        width: 100%;
+        margin-top: 10%;
+        margin-left: -50%;
+        min-height: 10vh;
+        min-width: 10vh;
       }
     }
   }
@@ -383,25 +399,35 @@
   color: rgb(44, 41, 41);
   border-radius: 100%;
   right: 1vw;
-  @media #{$smarmini}{
-    width: 5vw;
-    height:2.5vh;
-    top:35%;
-    font-size: 1.2ex;
-  }
-  @media #{$smarphone}{
-    top:35%;
-    width: 7vw;
-    height:3.5vh;
-    font-size: 1.2ex;
-  }
-  @media #{$tablet}{
-    top:35%;
-    width: 7vw;
-    height:50%;
-    border-radius:100%;
-    font-size: 1.2ex;
-  }
+    @media #{$smarmini}{
+      top:30%;
+      width: 5.5vw;
+      height:3.2vh;
+      font-size: 1.2ex;
+    }
+    @media #{$smarphone}{
+      top:32%;
+      width: 7vw;
+      height:4.5vh;
+      font-size: 1.2ex;
+    }
+    @media #{$tablet}{
+      top:32%;
+      width: 7vw;
+      height:45%;
+      border-radius:100%;
+      font-size: 1.2ex;
+    }
+    @media #{$desktop}{
+      right: 15%;
+  
+    }
+    @media #{$pantallaGrande}{
+      margin-right: 15%;
+    }
+    @media #{$pantallaExtraGrande}{
+      margin-right: 10%;
+    }
 }
   
 #rightNavBarButton_inactive {
@@ -415,23 +441,33 @@
   border-radius: 100%;
   right: 1vw;
     @media #{$smarmini}{
-      top:35%;
-      width: 5vw;
-      height:2.5vh;
+      top:30%;
+      width: 5.5vw;
+      height:3.2vh;
       font-size: 1.2ex;
     }
     @media #{$smarphone}{
-      top:35%;
+      top:32%;
       width: 7vw;
-      height:3.5vh;
+      height:4.5vh;
       font-size: 1.2ex;
     }
     @media #{$tablet}{
-      top:35%;
+      top:32%;
       width: 7vw;
-      height:50%;
+      height:45%;
       border-radius:100%;
       font-size: 1.2ex;
+    }
+    @media #{$desktop}{
+      right: 15%;
+  
+    }
+    @media #{$pantallaGrande}{
+      margin-right: 15%;
+    }
+    @media #{$pantallaExtraGrande}{
+      margin-right: 10%;
     }
 }
 #rightNavBarButton_inactive:hover {
@@ -464,6 +500,8 @@
   position: absolute;
   top: 2vh;
   z-index: 9;
+  width: 100%;
+  height: 100%;
   @media #{$smarmini}{
     width: 8vw;
     height:2.5vh;
@@ -474,7 +512,7 @@
   @media #{$smarphone}{
     width: 9vw;
     height:4.5vh;
-    left: 0%;
+    left: 5%;
     top:40%;
     font-size: 1.2ex;
   }
@@ -482,15 +520,34 @@
     width: 8.5vw;
     height:50%;
     left: 10%;
-    top:38%;
+    top:30%;
     font-size: 1.2ex;
   }
+  @media #{$desktop}{
+    width: 7vw;
+    height:auto;
+    left: 10%;
+    top:30%;
+    font-size: 1.2ex;
+
+  }
+  @media #{$pantallaGrande}{
+    width: 6vw;
+    height:auto;
+    left: 10%;
+    top:30%;
+    font-size: 1.2ex;
+  }
+
+
 }
 
 #loginNavBarbutton_inactive{
   position: absolute;
   top: 2vh;
   z-index: 9;
+  width: 100%;
+  height: 100%;
   @media #{$smarmini}{
     width: 8vw;
     height:2.5vh;
@@ -501,7 +558,7 @@
   @media #{$smarphone}{
     width: 9vw;
     height:4.5vh;
-    left: 0%;
+    left: 5%;
     top:40%;
     font-size: 1.2ex;
   }
@@ -509,25 +566,43 @@
     width: 8.5vw;
     height:50%;
     left: 10%;
-    top:38%;
+    top:30%;
     font-size: 1.2ex;
   }
+  @media #{$desktop}{
+    width: 6.5vw;
+    height:auto;
+    left: 10%;
+    top:30%;
+    font-size: 1.2ex;
+
+  }
+  @media #{$pantallaGrande}{
+    width: 5.5vw;
+    height:auto;
+    left: 10%;
+    top:32%;
+    font-size: 1.2ex;
+  }
+
+
 }
 
 .icono_nav_der {
-   height: 8vh;
+  min-height: 3.5vh; 
+  min-width: 2vw;
    width: auto;
     @media #{$smarmini}{
-      width: auto;
-      height: 4vh; 
+       min-height: 3vh; 
+       min-width: 3vw;
     }
     @media #{$smarphone}{
-      width: auto;
-      height: 4vh; 
+      min-height: 3.5vh; 
+      min-width: 3.5vw;
     }
     @media #{$tablet}{
-      width: auto;
-      height: 7vh; 
+      min-height: 3.5vh; 
+      min-width: 3.5vw;
     }
 }
 

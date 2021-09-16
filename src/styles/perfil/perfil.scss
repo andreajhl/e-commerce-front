@@ -9,6 +9,7 @@
 .userContenedor{
     height: 100vh;
     display: flex;
+    width: 80%;
 
     @media #{$smarmini}{
         width: 90%;
@@ -31,7 +32,7 @@
 }
 
 .fotoMarco{
-    width: 80%;
+    width: 45%;
     height: auto;
     @include caja-flex(flex,column,center,center,nowrap);
     &_i{
@@ -70,7 +71,8 @@
       }
 }
 .table {
-    width: 45%;
+    width: 100%;
+    padding-top: 3%;
     height: 80%;
     @include caja-flex(flex,column,initial,center,nowrap);
     @media #{$smarmini}{
@@ -101,6 +103,7 @@
     color: #413e3e;
     font-size: 3vh;
     margin-bottom: 3%;
+    cursor: pointer;
     @media #{$smarmini}{
         font-size: 1.4ex;
     }
@@ -111,8 +114,9 @@
 .inputFoto {
     border-radius: 10px;
     opacity: 1;
-    width: 50%;
+    width: 20%;
     height: 15%;
+    font-size: 2.5vh;
     cursor: pointer;
     text-align: center;
     background-color: sandybrown;

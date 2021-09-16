@@ -41,6 +41,7 @@
     border-bottom: 0.5px solid rgb(170, 161, 161);
     outline: none;
     color: #867f7f;
+    font-size: 2.5vh;
     font-weight: 500;
     background-color: rgb(233, 233, 233);
     text-align: center;
@@ -60,12 +61,11 @@
  .regisLeft {
      width: 50%;
    margin-top: 5%;
-
-   margin-bottom:5%;
  }
 
  .regisLeft h3 {
      text-align: center;
+     font-size: 3.5vh;
      @media #{$smarmini}{
         font-size: 1.2ex;
       }
@@ -93,6 +93,7 @@
 
 .google_btn {
     width: auto;
+    margin-top: 5%;
     border-radius: 10%;
     margin-bottom: 5%;
 }
@@ -104,12 +105,12 @@
 }
 .regisBtn {
     width: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 1.2rem;
     border: none;
     border-radius: 5px;
     padding: 0.6rem; 
-    margin-bottom: 2rem;
+    margin-bottom: 5%;
     background-color: sandybrown;
     color: #413e3e;
     font-weight: bold;

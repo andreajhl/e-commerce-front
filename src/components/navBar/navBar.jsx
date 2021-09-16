@@ -129,7 +129,7 @@ export default function NavBar() {
               {user && !user.admin && <button className="sucursales_button_home"><NavLink to='/whishlist' style={{textDecoration: "none", color:"white"}}>Deseos</NavLink></button>}                
             </div>
             <div className='user-cart'>
-              <div>
+              <div className='funcionUser'>
                 <div className="icono_Usuario">
                     <div id={loginBarState? "loginNavBarbutton_active" : "loginNavBarbutton_inactive"} className="loginNavBarbutton" onClick={ loginBarFunction }>
                     {user && user.uid ? <img className='img_perfil_nav' src={profileImg.foto} alt="imagen de perfil" /> : <MdAccountCircle className='img_perfil_nav_i'/>}
