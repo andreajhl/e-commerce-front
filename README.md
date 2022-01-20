@@ -66,20 +66,17 @@ Dependiento del status del usuario ( administrador, o usuario comun) se renderiz
 <br>
 
      - Usuario Comun:
-     <br>
      
-    ·Historial de compras y el estado de las mismas.
-    ·Perfil de usuario, editable (foto de perfil).
-    ·Acceso a la pagina de pago.
-    <br>
+        ·Historial de compras y el estado de las mismas.
+        ·Perfil de usuario, editable (foto de perfil).
+        ·Acceso a la pagina de pago.
     
      - Administrador:
-     <br>
      
-    ·Historial de compras de todos los usuarios (puede modificar su estado).
-    ·Edicion de pagina y productos; Puede editar, agregar o eliminar productos o las categorias por medio de un formulario.
-    ·Perfiles de usuario; tiene acceso al listado de usuarios registrados, puede bloquearlos o modificar su estatus a administrador.
-    ·Creacion de promociones; Puede crear promociones mediante un formulario, debe de elegir las categorias, fechas y porcentaje de descuento.
+        ·Historial de compras de todos los usuarios (puede modificar su estado).
+        ·Edicion de pagina y productos; Puede editar, agregar o eliminar productos o las categorias por medio de un formulario.
+        ·Perfiles de usuario; tiene acceso al listado de usuarios registrados, puede bloquearlos o modificar su estatus a administrador.
+        ·Creacion de promociones; Puede crear promociones mediante un formulario, debe de elegir las categorias, fechas y porcentaje de descuento.
 
 <br>
 <br>
