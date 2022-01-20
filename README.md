@@ -126,4 +126,4 @@ Esta ultima parte muestra un mapa interactivo que le permite al usuario ver las 
 ## Video de Muestra
 <br>
 
-<video src='https://dms.licdn.com/playlist/C4E05AQFpH6CZ0PK5bw/mp4-640p-30fp-crf28/0/1631807028565?e=1642737600&v=beta&t=VQsqBb81Se0jhqxrIjsha25CKSfEAH_7dD6izbFrIqw' alt='video resumen de e-commerce' />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Oz77ZNfxCHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
