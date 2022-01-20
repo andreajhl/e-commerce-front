@@ -65,7 +65,7 @@ Dependiento del status del usuario ( administrador, o usuario comun) se renderiz
 <br>
 <br>
 
-     #### Usuario Comun:
+     - Usuario Comun:
      <br>
      
     ·Historial de compras y el estado de las mismas.
@@ -73,7 +73,7 @@ Dependiento del status del usuario ( administrador, o usuario comun) se renderiz
     ·Acceso a la pagina de pago.
     <br>
     
-     #### Administrador:
+     - Administrador:
      <br>
      
     ·Historial de compras de todos los usuarios (puede modificar su estado).
@@ -125,3 +125,8 @@ Esta ultima parte muestra un mapa interactivo que le permite al usuario ver las 
     · Al culminar la instalacion ejecute 'npm start' para arrancar el proyecto.
     
 <br>
+
+## Video de Muestra
+<br>
+
+<video src='https://dms.licdn.com/playlist/C4E05AQFpH6CZ0PK5bw/mp4-640p-30fp-crf28/0/1631807028565?e=1642737600&v=beta&t=VQsqBb81Se0jhqxrIjsha25CKSfEAH_7dD6izbFrIqw' alt='video resumen de e-commerce' />
