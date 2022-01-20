@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Proyecto E-commerce - El Librero.
+<br>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Funcionalidad de la Aplicación.
 
-## Available Scripts
+### - Inicio: 
+<br>
+    
+Mutesra el listado de libros, los baners con las promos disponibles, los dintintos filtros combinables
+<br>
+    
+    ·Paginado.
+    ·Filtrado por idioma (ing, esp).
+    ·Filtrado por categoría de género.
+    ·Buscar por nombre de producto (mínimo 2 caracteres).
+    ·Ordenamiento ascendente y descendente (precio, alfabéticamente).
+    ·Buscador: Se puede buscar por nombre de autor o del libro (efecto debounce).
+    ·Filtrado por rango de precio (validacion: precio min < precio mayor).
+ <br>
+ <br>
 
-In the project directory, you can run:
+### - Detalles de Producto:
+<br>
+Muestra el stock del producto, un breve resumen de el, y sus datos ( autor, año de publicacion y editorial) y boton de compra para agregar al carrito
+<br>
+<br>
 
-### `npm start`
+### - Carro de Compras:
+<br>
+Muestra el listado de los productos agregados y modificar la cantidad de ellos, eliminar el producto o el carrito completo, muestra el precio final incluyendo los descuentos ya aplicados
+<br>
+<br>
+  
+    ·Boton borar item.
+    ·Borrar carro completo.
+    ·Muestra el precio final.
+    ·Agregar o eliminar un producto.
+    ·Boton para confirmar la compra ( redirige a la pagina de pago)
+<br>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### - Pasarela de Pago:
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Muestra el listado de productos a pagar, el precio de cada unop y el total y el total del descuento, presenta un formulario a llenar para la realizacion de pago, tiene datos requeridos como direccion, nombre completo, numero de tarjeta, codigo de seguridad y fecha de caducidad, numero de documento. Al finalizar el pago el usuario recibiora un correo con la informacion del pago si se aprobo o no, y el dueño un correo informando la compra.
+<br>
+<br>
 
-### `npm test`
+### - Login y registro:
+<br>
+Permite al usuario crear una cuenta con su cuenta de Google con solo un click o crearlo manuelamente, lo mismo ocurre con el login puede iniciar con su usuario y password o conm Google, al iniciar seccion va a poder acceder a la pagina de pago de su carrito de compras, su historial de compras, y su perfil
+<br>
+<br>
+  
+    ·Crear usuario manualmente o con Google.
+    ·Logearse manualmente o con Google.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
+<br>
 
-### `npm run build`
+### - Pantalla de Usuario (opciones):
+<br>
+Dependiento del status del usuario ( administrador, o usuario comun) se renderizaran las opciones disponibles, entre ellas su perfil e historial de compras 
+<br>
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+     #### Usuario Comun:
+     <br>
+     
+    ·Historial de compras y el estado de las mismas.
+    ·Perfil de usuario, editable (foto de perfil).
+    ·Acceso a la pagina de pago.
+    <br>
+    
+     #### Administrador:
+     <br>
+     
+    ·Historial de compras de todos los usuarios (puede modificar su estado).
+    ·Edicion de pagina y productos; Puede editar, agregar o eliminar productos o las categorias por medio de un formulario.
+    ·Perfiles de usuario; tiene acceso al listado de usuarios registrados, puede bloquearlos o modificar su estatus a administrador.
+    ·Creacion de promociones; Puede crear promociones mediante un formulario, debe de elegir las categorias, fechas y porcentaje de descuento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### - Tiendas:
+<br>
+Esta ultima parte muestra un mapa interactivo que le permite al usuario ver las sedes de la empresa y buscar la mas cercana a el con solo un click
+<br>
+<br>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Tecnologías Utilizadas.
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    · SASS.
+    · HTML.
+    · React.
+    · Redux.
+    · Express.
+    · MongoDb.
+    · Mongoose.
+    · NodeJs.
+    · Javascript.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br>
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Clonar Repositorio.
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    · git clone https://github.com/andreajhl/e-commerce-front.git
+<br>
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Probar Aplicación.
 
-### Code Splitting
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    · Ingresar a la carpeta del proyecto desde tu editor de codigo favorito.
+    · Abre la consola del proyecto.
+    · ejecute los comandos npm i.
+    · Al culminar la instalacion ejecute 'npm start' para arrancar el proyecto.
+    
+<br>
