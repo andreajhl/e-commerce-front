@@ -126,6 +126,6 @@ Esta ultima parte muestra un mapa interactivo que le permite al usuario ver las 
 ## Video de Muestra
 <br>
 
-[![Alt text](https://img.youtube.com/vi/Oz77ZNfxCHs/0.jpg)](https://www.youtube.com/watch?v=Oz77ZNfxCHs&t=22s)
+[![Alt text](https://img.youtube.com/vi/Oz77ZNfxCHs/0.jpg)](https://www.youtube.com/watch?v=Oz77ZNfxCHs&t=05s)
 
 
