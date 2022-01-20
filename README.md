@@ -125,7 +125,8 @@ Esta ultima parte muestra un mapa interactivo que le permite al usuario ver las 
 
 ## Video de Muestra
 <br>
-[![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://www.youtube.com/watch?v=Oz77ZNfxCHs&t=05s)
+
+[![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/Oz77ZNfxCHs)
 
 
 [![Alt text](https://img.youtube.com/vi/Oz77ZNfxCHs/0.jpg)](https://www.youtube.com/watch?v=Oz77ZNfxCHs&t=05s)
